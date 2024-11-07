@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <!-- Profile Header -->
+    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div class="flex items-center space-x-4">
+            <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold">
+                {{ user.name[0] }}
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold">{{ user.name }}</h1>
+                <p class="text-gray-600">{{ user.role }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Details -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Personal Information -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold mb-4">Personal Information</h2>
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-gray-600 text-sm">Student ID</label>
+                    <p class="font-medium">{{ user.id }}</p>
+                </div>
+                <div>
+                    <label class="block text-gray-600 text-sm">Major</label>
+                    <p class="font-medium">{{ user.major }}</p>
+                </div>
+                <div>
+                    <label class="block text-gray-600 text-sm">Contact</label>
+                    <p class="font-medium">{{ user.contact_info }}</p>
+                </div>
+            </div>
+            <button onclick="editProfile()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                Edit Profile
+            </button>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold mb-4">Recent Lab Bookings</h2>
+            <div class="space-y-4">
+                {% for booking in user.recent_bookings %}
+                <div class="border-b pb-3">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-medium">{{ booking.lab_id }}</p>
+                            <p class="text-sm text-gray-600">{{ booking.date }}</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-sm
+                            {% if booking.status == 'Approved' %}
+                                bg-green-100 text-green-800
+                            {% elif booking.status == 'Pending' %}
+                                bg-yellow-100 text-yellow-800
+                            {% else %}
+                                bg-red-100 text-red-800
+                            {% endif %}
+                        ">
+                            {{ booking.status }}
+                        </span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Change Password -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold mb-4">Security</h2>
+            <form id="passwordForm" class="space-y-4">
+                <div>
+                    <label class="block text-gray-600 text-sm">Current Password</label>
+                    <input type="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <div>
+                    <label class="block text-gray-600 text-sm">New Password</label>
+                    <input type="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <div>
+                    <label class="block text-gray-600 text-sm">Confirm New Password</label>
+                    <input type="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                </div>
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                    Change Password
+                </button>
+            </form>
+        </div>
+
+        <!-- Notifications Settings -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-bold mb-4">Notification Preferences</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="font-medium">Email Notifications</p>
+                        <p class="text-sm text-gray-600">Receive booking updates via email</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer" checked>
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="font-medium">SMS Notifications</p>
+                        <p class="text-sm text-gray-600">Receive urgent updates via SMS</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function editProfile() {
+    alert('Edit profile functionality will be implemented soon!');
+}
+
+document.getElementById('passwordForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Password change functionality will be implemented soon!');
+});
+
+// Handle notification toggles
+document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        alert(`Notification settings will be saved soon! Status: ${this.checked ? 'Enabled' : 'Disabled'}`);
+    });
+});
+</script>
+{% endblock %}
