@@ -38,7 +38,31 @@ CREATE TABLE IF NOT EXISTS it_staff_notifications (
     FOREIGN KEY (processed_by) REFERENCES users(userID)
 );
 
--- Add indexes for better performance
-CREATE INDEX idx_equipment_requests_status ON equipment_requests(status);
-CREATE INDEX idx_purchase_requests_status ON purchase_requests(status);
-CREATE INDEX idx_notifications_status ON it_staff_notifications(status);
+-- Drop existing indexes if they exist
+DROP INDEX IF EXISTS idx_equipment_requests_status;
+DROP INDEX IF EXISTS idx_purchase_requests_status;
+DROP INDEX IF EXISTS idx_notifications_status;
+
+-- Recreate indexes
+CREATE INDEX IF NOT EXISTS idx_equipment_requests_status ON equipment_requests(status);
+CREATE INDEX IF NOT EXISTS idx_purchase_requests_status ON purchase_requests(status);
+CREATE INDEX IF NOT EXISTS idx_notifications_status ON it_staff_notifications(status);
+
+-- Labs Table
+CREATE TABLE IF NOT EXISTS labs (
+    labID TEXT PRIMARY KEY,
+    size INTEGER NOT NULL,
+    location TEXT NOT NULL,
+    info TEXT,
+    isAvailable BOOLEAN DEFAULT TRUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Delete existing lab data to avoid conflicts
+DELETE FROM labs;
+
+-- Insert sample labs
+INSERT INTO labs (labID, size, location, info) VALUES
+('LAB001', 30, 'Building A, Floor 1', 'General Purpose Lab'),
+('LAB002', 25, 'Building A, Floor 2', 'Programming Lab'),
+('LAB003', 20, 'Building B, Floor 1', 'Hardware Lab');

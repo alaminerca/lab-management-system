@@ -1,93 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Lab Management System</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-    <nav class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">Lab Management System</h1>
-            <div class="space-x-4">
-                <a href="/dashboard" class="hover:text-gray-200">Dashboard</a>
-                {% if session.role in ['student', 'instructor', 'administrator'] %}
-                <a href="/labs" class="hover:text-gray-200">Labs</a>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold">Welcome, {{ session.name }}</h1>
+    <p class="text-gray-600">Role: {{ session.role | title }}</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <!-- Lab Management Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Lab Management</h2>
+            <div class="space-y-2">
+                {% if 'view_lab' in session.permissions %}
+                <a href="/labs/view" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    View Available Labs
+                </a>
                 {% endif %}
-                {% if session.role == 'administrator' %}
-                <a href="/inventory" class="hover:text-gray-200">Inventory</a>
+
+                {% if session.role in ['student', 'instructor'] %}
+                <a href="/labs/mybookings" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    My Bookings
+                </a>
                 {% endif %}
+
+                {% if 'assign_lab' in session.permissions %}
+                <a href="{{ url_for('view_assignments') }}" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Assign Labs
+                </a>
+                {% endif %}
+
+                {% if 'access_lab' in session.permissions %}
+                <a href="/labs/access" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Access Lab
+                </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Equipment Management Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Equipment Management</h2>
+            <div class="space-y-2">
+                {% if 'request_equipment' in session.permissions %}
+                <a href="/inventory/request" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Request Equipment
+                </a>
+                {% endif %}
+
+                {% if 'purchase_equipment' in session.permissions %}
+                <a href="/inventory/purchase" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Purchase Equipment
+                </a>
+                {% endif %}
+
                 {% if session.role == 'it_staff' %}
-                <a href="/maintenance" class="hover:text-gray-200">Maintenance</a>
+                <a href="/equipment/maintain" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Maintain Equipment
+                </a>
+                <a href="/equipment/check" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Check Equipment
+                </a>
+                <a href="/equipment/add" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Add Equipment
+                </a>
+                <a href="/equipment/remove" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Remove Equipment
+                </a>
                 {% endif %}
-                <a href="/logout" class="hover:text-gray-200">Logout</a>
             </div>
         </div>
-    </nav>
 
-    <main class="container mx-auto mt-8 p-4">
-        <div class="mb-8">
-            <h2 class="text-2xl font-bold">Welcome, {{ session.role | title }}</h2>
-            <p class="text-gray-600">User ID: {{ session.user_id }}</p>
+        {% if session.role == 'it_staff' %}
+        <!-- Maintenance Card (IT Staff Only) -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Maintenance</h2>
+            <div class="space-y-2">
+                <a href="/maintenance/tasks" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    View Tasks
+                </a>
+                <a href="/maintenance/reports" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Maintenance Reports
+                </a>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% if session.role in ['student', 'instructor'] %}
-            <!-- Student/Instructor Features -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-4">Lab Access</h3>
-                <div class="space-y-2">
-                    <a href="/labs/view" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">View Available Labs</a>
-                    <a href="/labs/book" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Book Lab</a>
-                    <a href="/labs/mybookings" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">My Bookings</a>
-                </div>
-            </div>
-            {% endif %}
-
-            {% if session.role == 'administrator' %}
-            <!-- Admin Features -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-4">Lab Management</h3>
-                <div class="space-y-2">
-                    <a href="/labs/view" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">View All Labs</a>
-                    <a href="/labs/assign" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Assign Labs</a>
-                    <a href="/labs/schedule" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Lab Schedule</a>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-4">Inventory Management</h3>
-                <div class="space-y-2">
-                    <a href="/inventory/request" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Request Equipment</a>
-                    <a href="/inventory/purchase" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Purchase Equipment</a>
-                    <a href="/inventory/status" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">View Requests</a>
-                </div>
-            </div>
-            {% endif %}
-
-            {% if session.role == 'it_staff' %}
-            <!-- IT Staff Features -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-4">Equipment Management</h3>
-                <div class="space-y-2">
-                    <a href="/equipment/check" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Check Equipment</a>
-                    <a href="/equipment/repair" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Repair Equipment</a>
-                    <a href="/equipment/add" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Add Equipment</a>
-                    <a href="/equipment/remove" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Remove Equipment</a>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold mb-4">Maintenance Tasks</h3>
-                <div class="space-y-2">
-                    <a href="/maintenance/tasks" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">View Tasks</a>
-                    <a href="/maintenance/reports" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Maintenance Reports</a>
-                    <a href="/it/notifications" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">Notifications</a>
-                </div>
-            </div>
-            {% endif %}
-        </div>
-    </main>
-</body>
-</html>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

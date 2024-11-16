@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold mb-6">Confirm Lab Booking</h2>
+
+        <div class="mb-6 space-y-4">
+            <p><span class="font-medium">Lab:</span> {{ lab_id }}</p>
+            <p><span class="font-medium">Date:</span> {{ date }}</p>
+            <p><span class="font-medium">Start Time:</span> {{ start_time }}</p>
+            <p><span class="font-medium">End Time:</span> {{ end_time }}</p>
+        </div>
+
+        <form method="POST" action="{{ url_for('confirm_booking') }}" class="space-y-4">
+            <input type="hidden" name="lab_id" value="{{ lab_id }}">
+            <input type="hidden" name="date" value="{{ date }}">
+            <input type="hidden" name="start_time" value="{{ start_time }}">
+            <input type="hidden" name="end_time" value="{{ end_time }}">
+
+            <div class="flex space-x-4">
+                <button type="submit"
+                        class="flex-1 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+                    Confirm Booking
+                </button>
+                <a href="{{ url_for('view_labs') }}"
+                   class="flex-1 px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 text-center">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold mb-6">Confirm Lab Booking</h2>
+
+        <div class="mb-6 space-y-4">
+            <p><span class="font-medium">Lab:</span> {{ lab_id }}</p>
+            <p><span class="font-medium">Date:</span> {{ date }}</p>
+            <p><span class="font-medium">Start Time:</span> {{ start_time }}</p>
+            <p><span class="font-medium">End Time:</span> {{ end_time }}</p>
+        </div>
+
+        <form method="POST" action="{{ url_for('confirm_booking') }}" class="space-y-4">
+            <input type="hidden" name="lab_id" value="{{ lab_id }}">
+            <input type="hidden" name="date" value="{{ date }}">
+            <input type="hidden" name="start_time" value="{{ start_time }}">
+            <input type="hidden" name="end_time" value="{{ end_time }}">
+
+            <div class="flex space-x-4">
+                <button type="submit"
+                        class="flex-1 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
+                    Confirm Booking
+                </button>
+                <a href="{{ url_for('view_labs') }}"
+                   class="flex-1 px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 text-center">
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
