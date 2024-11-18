@@ -28,9 +28,10 @@
                 </a>
                 {% endif %}
 
-                {% if 'access_lab' in session.permissions %}
-                <a href="/labs/access" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
-                    Access Lab
+                {% if 'access_lab' in session.permissions and current_active_booking %}
+                <a href="{{ url_for('access_lab', booking_id=current_active_booking.booking_id) }}"
+                   class="block p-2 bg-green-50 hover:bg-green-100 rounded">
+                    Access Lab {{ current_active_booking.lab_id }}
                 </a>
                 {% endif %}
             </div>
@@ -56,7 +57,7 @@
                 <a href="/equipment/maintain" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
                     Maintain Equipment
                 </a>
-                <a href="/equipment/check" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                <a href="{{ url_for('check_equipment') }}" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
                     Check Equipment
                 </a>
                 <a href="/equipment/add" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">

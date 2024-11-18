@@ -3,6 +3,7 @@ import os
 from functools import wraps
 from datetime import datetime, date
 from modules.lab_management import LabManagement
+from modules.equipment_management import EquipmentManagement
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -236,17 +237,124 @@ def my_bookings():
         flash('You do not have permission to view bookings')
         return redirect(url_for('dashboard'))
 
-    # Get bookings for current user
     bookings = LabManagement.get_user_bookings(session['user_id'])
     return render_template('labs/mybookings.html', bookings=bookings)
 
+
+@app.route('/labs/access/<int:booking_id>')
+@login_required
+def access_lab(booking_id):
+    if 'access_lab' not in session.get('permissions', []):
+        flash('You do not have permission to access labs')
+        return redirect(url_for('my_bookings'))
+
+    booking = LabManagement.get_booking(booking_id)
+
+    if not booking:
+        flash('Booking not found')
+        return redirect(url_for('my_bookings'))
+
+    if booking['status'] != 'approved':
+        flash('Booking must be approved to access lab')
+        return redirect(url_for('my_bookings'))
+
+    # Fix datetime string parsing
+    current_time = datetime.now()
+    start_time = datetime.strptime(booking['start_time'][:16], '%Y-%m-%d %H:%M')  # Remove seconds
+    end_time = datetime.strptime(booking['end_time'][:16], '%Y-%m-%d %H:%M')  # Remove seconds
+
+    if not (start_time <= current_time <= end_time):
+        flash('Lab can only be accessed during booked time slot')
+        return redirect(url_for('my_bookings'))
+
+    return render_template('labs/access.html', booking=booking)
 
 
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('dashboard.html')
+    current_active_booking = None
+    if 'access_lab' in session.get('permissions', []):
+        current_active_booking = LabManagement.get_current_active_booking(session['user_id'])
+    return render_template('dashboard.html', current_active_booking=current_active_booking)
 
+
+# Equipment section
+
+@app.route('/equipment/check')
+@login_required
+def check_equipment():  # This is the correct function name
+    if 'check_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    equipment_list = EquipmentManagement.get_all_equipment()
+    return render_template('equipment/check.html', equipment=equipment_list)
+
+
+# @app.route('/equipment/report/<int:equip_id>', methods=['POST'])
+# @login_required
+# def report_equipment(equip_id):
+#     if 'check_equipment' not in session.get('permissions', []):
+#         flash('Unauthorized access')
+#         return redirect(url_for('dashboard'))
+#
+#     issue = request.form.get('issue')
+#     if EquipmentManagement.report_issue(equip_id, issue, session['user_id']):
+#         flash('Issue reported successfully')
+#     else:
+#         flash('Failed to report issue')
+#     return redirect(url_for('check_equipment'))
+
+
+@app.route('/equipment/report/<int:equip_id>', methods=['POST'])
+@login_required
+def report_issue(equip_id):
+    if 'check_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    issue = request.form.get('issue')
+    user_id = session['user_id']
+
+    print(f"Reporting issue:")  # Debug prints
+    print(f"Equipment ID: {equip_id}")
+    print(f"Issue: {issue}")
+    print(f"Reported by: {user_id}")
+
+    if EquipmentManagement.report_issue(equip_id, issue, user_id):
+        flash('Issue reported successfully')
+    else:
+        flash('Failed to report issue')
+
+    return redirect(url_for('check_equipment'))
+
+
+@app.route('/equipment/maintain')
+@login_required
+def maintain_equipment():
+    if 'maintain_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    # Get equipment with reported issues
+    issues = EquipmentManagement.get_reported_issues()
+    return render_template('equipment/maintain.html', issues=issues)
+
+
+@app.route('/equipment/maintain/<int:issue_id>', methods=['POST'])
+@login_required
+def resolve_issue(issue_id):
+    if 'maintain_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    resolution = request.form.get('resolution')
+    if EquipmentManagement.resolve_issue(issue_id, resolution, session['user_id']):
+        flash('Issue resolved successfully')
+    else:
+        flash('Failed to resolve issue')
+    return redirect(url_for('maintain_equipment'))
 
 if __name__ == '__main__':
     app.run(debug=True)

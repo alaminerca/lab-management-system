@@ -66,3 +66,18 @@ INSERT INTO labs (labID, size, location, info) VALUES
 ('LAB001', 30, 'Building A, Floor 1', 'General Purpose Lab'),
 ('LAB002', 25, 'Building A, Floor 2', 'Programming Lab'),
 ('LAB003', 20, 'Building B, Floor 1', 'Hardware Lab');
+
+-- Create equipment_issues table with all needed columns
+CREATE TABLE IF NOT EXISTS equipment_issues (
+    issueID INTEGER PRIMARY KEY AUTOINCREMENT,
+    equipID INTEGER,
+    description TEXT,
+    report_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    resolved_date DATETIME,
+    reported_by INTEGER,
+    resolution TEXT,
+    resolved_by INTEGER,
+    FOREIGN KEY (equipID) REFERENCES equipment(equipID),
+    FOREIGN KEY (reported_by) REFERENCES users(userID),
+    FOREIGN KEY (resolved_by) REFERENCES users(userID)
+);

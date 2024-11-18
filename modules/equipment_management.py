@@ -113,22 +113,50 @@ class EquipmentManagement:
             return False
 
     @staticmethod
-    def report_issue(equip_id: int, issue_description: str) -> bool:
-        """Report an issue with equipment"""
+    @staticmethod
+    @staticmethod
+    def get_all_equipment() -> List[Dict]:
+        """Retrieve all equipment with their status"""
         try:
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
+                cursor.execute("SELECT * FROM equipment")
+                rows = cursor.fetchall()  # Get rows once
+                columns = [desc[0] for desc in cursor.description]
+                return [dict(zip(columns, row)) for row in rows]  # Use stored rows
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")
+            return []
+
+    @staticmethod
+    def report_issue(equip_id: int, description: str, reported_by: int) -> bool:
+        """Report equipment issue and update status"""
+        try:
+            print(f"Attempting to insert issue:")  # Debug prints
+            print(f"Equipment ID: {equip_id}")
+            print(f"Description: {description}")
+            print(f"Reported by: {reported_by}")
+
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                # Create issue record
                 cursor.execute("""
-                    INSERT INTO equipment_issues (equipID, description, report_date)
-                    VALUES (?, ?, datetime('now'))
-                """, (equip_id, issue_description))
+                    INSERT INTO equipment_issues 
+                    (equipID, description, reported_by, report_date)
+                    VALUES (?, ?, ?, datetime('now'))
+                """, (equip_id, description, reported_by))
 
                 # Update equipment status
                 cursor.execute("""
-                    UPDATE equipment
-                    SET status = 'maintenance_required'
+                    UPDATE equipment 
+                    SET status = 'maintenance_required',
+                        last_checked = datetime('now')
                     WHERE equipID = ?
                 """, (equip_id,))
+
+                conn.commit()  # Make sure to commit changes
                 return True
-        except sqlite3.Error:
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")  # Print specific error
             return False
+

@@ -32,23 +32,16 @@
                             {{ booking.status }}
                         </span>
                     </td>
-                    <td class="px-6 py-4">
-                        {% if booking.status == 'approved' %}
-                        <a href="{{ url_for('access_lab', booking_id=booking.bookingID) }}"
-                           class="text-blue-600 hover:text-blue-900">
-                            Access Lab
-                        </a>
-                        {% endif %}
-                    </td>
+                        <td class="px-6 py-4">
+                            {% if booking.status == 'approved' %}
+                            <a href="{{ url_for('access_lab', booking_id=booking.bookingID) }}"
+                               class="text-blue-600 hover:text-blue-900">
+                                Access Lab
+                            </a>
+                            {% endif %}
+                        </td>
                 </tr>
                 {% endfor %}
-                {% if not bookings %}
-                <tr>
-                    <td colspan="5" class="px-6 py-4 text-center text-gray-500">
-                        No bookings found
-                    </td>
-                </tr>
-                {% endif %}
             </tbody>
         </table>
     </div>

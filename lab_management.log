@@ -599,3 +599,534 @@
 2024-11-17 01:47:26,774 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2024 01:47:26] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
 2024-11-17 01:47:26,809 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2024 01:47:26] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
 2024-11-17 01:47:45,160 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2024 01:47:45] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-17 01:53:39,396 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2024 01:53:39] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-17 01:53:43,067 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2024 01:53:43] "[32mGET /labs/mybookings HTTP/1.1[0m" 302 -
+2024-11-17 01:53:43,087 - werkzeug - INFO - 127.0.0.1 - - [17/Nov/2024 01:53:43] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:25:05,269 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:25:06,325 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:25:06,359 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:25:06,455 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:25:16,086 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:16] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 17:25:16,198 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:16] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:25:17,900 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-18 17:25:25,688 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:25:25,865 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:25] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:25:28,810 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:28] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:25:32,546 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2024-11-18 17:25:32,563 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\templating.py', reloading
+2024-11-18 17:25:32,579 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2024-11-18 17:25:32,589 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\helpers.py', reloading
+2024-11-18 17:25:32,603 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:32] "[35m[1mGET /labs/mybookings HTTP/1.1[0m" 500 -
+2024-11-18 17:25:32,604 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\werkzeug\\routing.py', reloading
+2024-11-18 17:25:32,882 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:32] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 17:25:32,895 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:32] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 17:25:33,263 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:33] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:25:33,506 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:25:34,985 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:25:35,012 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:25:35,118 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:25:36,104 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:25:36] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-18 17:26:16,640 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:26:16] "[32mGET /labs/mybookings HTTP/1.1[0m" 302 -
+2024-11-18 17:26:16,667 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:26:16] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:26:26,434 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:26:26] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-18 17:29:47,502 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:29:47,504 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:29:47,505 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:29:48,218 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:29:50,279 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:29:50,308 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:29:50,428 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:31:48,891 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\lab_management.py', reloading
+2024-11-18 17:31:48,904 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\lab_management.py', reloading
+2024-11-18 17:31:48,905 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\lab_management.py', reloading
+2024-11-18 17:31:48,906 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\lab_management.py', reloading
+2024-11-18 17:31:50,098 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:31:51,228 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:31:51,249 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:31:51,344 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:33:57,595 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:33:57] "[32mGET /labs/mybookings HTTP/1.1[0m" 302 -
+2024-11-18 17:33:57,617 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:33:57] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:34:06,600 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:34:06,632 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:06] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:34:09,089 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:09] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:34:20,260 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:20] "[35m[1mGET /labs/access/7 HTTP/1.1[0m" 500 -
+2024-11-18 17:34:20,261 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\_strptime.py', reloading
+2024-11-18 17:34:20,489 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:20] "GET /labs/access/7?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 17:34:20,542 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:20] "GET /labs/access/7?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 17:34:20,768 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:34:22,072 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:34:22,094 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:34:22,190 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:34:22,380 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:22] "GET /labs/access/7?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:34:26,401 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:26] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-18 17:34:42,183 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 17:34:42,207 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:42] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:34:52,200 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:34:52,241 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:52] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:34:54,647 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:54] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:34:58,636 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:34:58] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:35:03,188 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:03] "[35m[1mGET /labs/access/1 HTTP/1.1[0m" 500 -
+2024-11-18 17:35:03,256 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:03] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 17:35:03,267 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:03] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 17:35:03,468 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:03] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:35:03,609 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:03] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 17:35:03,857 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:03] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:35:39,313 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:35:39] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-18 17:39:13,085 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:39:13] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:39:15,679 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:39:15] "[35m[1mGET /labs/access/1 HTTP/1.1[0m" 500 -
+2024-11-18 17:39:15,728 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:39:15] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 17:39:15,740 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:39:15] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 17:39:16,296 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:39:16] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:39:16,397 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:39:16] "GET /labs/access/1?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 17:40:30,982 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:40:30] "[35m[1mGET /labs/access/6 HTTP/1.1[0m" 500 -
+2024-11-18 17:40:31,025 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:40:31] "GET /labs/access/6?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 17:40:31,028 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:40:31] "GET /labs/access/6?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 17:40:31,434 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:40:31] "GET /labs/access/6?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:40:31,436 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:40:31] "GET /labs/access/6?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 17:40:32,215 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:40:32] "GET /labs/access/6?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 17:41:40,203 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:41:40,205 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:41:40,207 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:41:40,210 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:41:41,010 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:41:42,698 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:41:42,720 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:41:42,815 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:41:46,496 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:41:46] "[32mGET /labs/view HTTP/1.1[0m" 302 -
+2024-11-18 17:41:46,519 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:41:46] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:41:57,964 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:41:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:41:57,994 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:41:57] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:42:01,517 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:01] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:42:06,958 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:06] "[32mGET /labs/access/7 HTTP/1.1[0m" 302 -
+2024-11-18 17:42:06,980 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:06] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:42:18,935 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:18] "[32mGET /labs/access/7 HTTP/1.1[0m" 302 -
+2024-11-18 17:42:18,953 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:18] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:42:21,417 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:21] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:42:27,370 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:27] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-18 17:42:34,524 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:34] "[33mGET /labs/access HTTP/1.1[0m" 404 -
+2024-11-18 17:42:38,542 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:42:38] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:47:21,594 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:47:21,594 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:47:21,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:47:21,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 17:47:22,630 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:51:06,667 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 17:51:07,735 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 17:51:07,758 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 17:51:07,852 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 17:51:12,363 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:12] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-11-18 17:51:12,390 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:12] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:51:22,745 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:51:22,776 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:22] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:51:25,843 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:25] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:51:28,269 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:28] "[32mGET /labs/access/7 HTTP/1.1[0m" 302 -
+2024-11-18 17:51:28,285 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:28] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:51:30,637 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:30] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:51:34,538 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:34] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:51:48,711 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:48] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-18 17:51:48,738 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:48] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:51:58,223 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:51:58] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:52:06,691 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:06] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:52:23,369 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 17:52:23,381 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:23] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:52:32,516 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:52:32,541 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:32] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:52:36,994 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:36] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:52:39,255 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:39] "[32mPOST /labs/assignment/process/5/approve HTTP/1.1[0m" 302 -
+2024-11-18 17:52:39,279 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:39] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:52:40,496 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:40] "[32mPOST /labs/assignment/process/8/approve HTTP/1.1[0m" 302 -
+2024-11-18 17:52:40,523 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:40] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:52:41,861 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:41] "[32mPOST /labs/assignment/process/3/approve HTTP/1.1[0m" 302 -
+2024-11-18 17:52:41,887 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:41] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:52:47,074 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:47] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:52:49,434 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:49] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:52:52,148 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:52] "[33mGET /inventory/request HTTP/1.1[0m" 404 -
+2024-11-18 17:52:54,669 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:54] "[33mGET /inventory/purchase HTTP/1.1[0m" 404 -
+2024-11-18 17:52:58,474 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 17:52:58,489 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:52:58] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:53:07,683 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:53:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:53:07,701 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:53:07] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:53:36,436 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:53:36] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:53:47,678 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:53:47] "[32mGET /labs/access/8 HTTP/1.1[0m" 302 -
+2024-11-18 17:53:47,703 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:53:47] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:53:57,752 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:53:57] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:54:00,793 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:00] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:54:15,917 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:15] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-18 17:54:15,948 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:15] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:54:19,389 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 17:54:19,401 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:19] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:54:27,877 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:54:27,893 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:27] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:54:31,571 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:31] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:54:40,703 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:40] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:54:52,532 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:52] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:54:56,546 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:54:56] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:55:02,603 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:02] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:55:07,976 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:07] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 17:55:12,136 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:12] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:55:20,611 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:20] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 17:55:20,626 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:20] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:55:31,255 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:55:31,273 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:31] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:55:33,779 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:33] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 17:55:41,857 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:55:41] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:56:01,123 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:01] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-18 17:56:01,148 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:01] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 17:56:08,067 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:08] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:56:10,759 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 17:56:10,774 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:10] "GET /login HTTP/1.1" 200 -
+2024-11-18 17:56:18,260 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 17:56:18,280 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:18] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 17:56:21,808 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 17:56:21] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:02:23,340 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:23] "[32mGET /labs/access/1 HTTP/1.1[0m" 302 -
+2024-11-18 18:02:23,365 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:23] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:02:28,042 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:28] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:02:30,964 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:30] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 18:02:30,980 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:30] "GET /login HTTP/1.1" 200 -
+2024-11-18 18:02:39,193 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 18:02:39,210 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:39] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 18:02:46,829 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:46] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 18:02:53,177 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:53] "[32mPOST /labs/assignment/process/9/approve HTTP/1.1[0m" 302 -
+2024-11-18 18:02:53,199 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:53] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 18:02:58,972 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 18:02:58,986 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:02:58] "GET /login HTTP/1.1" 200 -
+2024-11-18 18:03:20,915 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:03:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 18:03:20,937 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:03:20] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 18:03:24,861 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:03:24] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:03:47,794 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:03:47] "[32mGET /labs/access/3 HTTP/1.1[0m" 302 -
+2024-11-18 18:03:47,820 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:03:47] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:04:09,218 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:09] "[32mGET /labs/access/6 HTTP/1.1[0m" 302 -
+2024-11-18 18:04:09,245 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:09] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:04:21,514 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:21] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 18:04:21,528 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:21] "GET /login HTTP/1.1" 200 -
+2024-11-18 18:04:31,705 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 18:04:31,724 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:31] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 18:04:40,455 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:04:40] "GET /labs/access/9 HTTP/1.1" 200 -
+2024-11-18 18:05:11,756 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:05:11] "[33mGET /labs HTTP/1.1[0m" 404 -
+2024-11-18 18:05:20,378 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:05:20] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 18:05:26,165 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:05:26] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 18:24:04,098 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:24:04,099 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:24:04,100 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:24:04,100 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:24:05,238 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 18:24:13,121 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 18:24:13,147 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 18:24:13,377 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 18:29:41,458 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 18:29:41,462 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 18:29:41,463 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 18:29:41,463 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 18:29:41,464 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 18:29:42,575 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 18:29:43,961 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 18:29:43,984 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 18:29:44,082 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 18:29:46,165 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:29:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 18:29:46,211 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:29:46] "GET /login HTTP/1.1" 200 -
+2024-11-18 18:30:21,305 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 18:30:21,415 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:21] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 18:30:29,806 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:29] "[33mGET /equipment/maintain HTTP/1.1[0m" 404 -
+2024-11-18 18:30:33,402 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2024-11-18 18:30:33,406 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:33] "[35m[1mGET /equipment/check HTTP/1.1[0m" 500 -
+2024-11-18 18:30:33,619 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:33] "GET /equipment/check?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 18:30:33,622 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:33] "GET /equipment/check?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 18:30:34,093 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 18:30:35,778 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 18:30:35,804 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 18:30:35,902 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 18:30:36,954 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:36] "[33mGET /equipment/add HTTP/1.1[0m" 404 -
+2024-11-18 18:30:39,886 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:39] "[33mGET /equipment/remove HTTP/1.1[0m" 404 -
+2024-11-18 18:30:43,263 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:43] "[33mGET /maintenance/tasks HTTP/1.1[0m" 404 -
+2024-11-18 18:30:47,289 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:30:47] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 18:33:33,786 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:33:33,787 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:33:33,788 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:33:33,788 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 18:33:34,628 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 18:33:35,915 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 18:33:35,936 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 18:33:36,027 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 18:33:36,458 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:33:36] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-11-18 18:33:36,501 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:33:36] "GET /login HTTP/1.1" 200 -
+2024-11-18 18:33:44,726 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:33:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 18:33:44,790 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:33:44] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 18:33:49,353 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:33:49] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 18:33:58,236 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:33:58] "[33mGET /equipment/maintain HTTP/1.1[0m" 404 -
+2024-11-18 18:34:01,973 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:34:01] "[33mGET /maintenance/tasks HTTP/1.1[0m" 404 -
+2024-11-18 18:34:04,847 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:34:04] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 18:35:59,211 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:35:59] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 18:41:29,419 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:41:29] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 18:51:41,260 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:51:41] "[33mGET /maintenance/tasks HTTP/1.1[0m" 404 -
+2024-11-18 18:51:44,605 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:51:44] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 18:52:05,980 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:52:05] "[33mGET /equipment HTTP/1.1[0m" 404 -
+2024-11-18 18:52:14,895 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 18:52:14] "[33mGET /labs HTTP/1.1[0m" 404 -
+2024-11-18 21:25:01,512 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 21:25:02,845 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 21:25:02,867 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 21:25:02,961 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 21:25:06,739 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:25:06] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-11-18 21:25:06,768 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:25:06] "GET /login HTTP/1.1" 200 -
+2024-11-18 21:25:20,930 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:25:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 21:25:21,012 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:25:21] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:25:23,223 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:25:23] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:27:18,277 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:27:18] "[32mGET /labs/access/3 HTTP/1.1[0m" 302 -
+2024-11-18 21:27:18,301 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:27:18] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:27:32,352 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:27:32] "[32mGET /labs/access/6 HTTP/1.1[0m" 302 -
+2024-11-18 21:27:32,378 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:27:32] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:30:10,079 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:10] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:30:14,457 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:14] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 21:30:18,010 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:18] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 21:30:22,879 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:22] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:30:25,715 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:25] "[33mGET /equipment HTTP/1.1[0m" 404 -
+2024-11-18 21:30:29,578 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:29] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 21:30:29,597 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:30:29] "GET /login HTTP/1.1" 200 -
+2024-11-18 21:31:22,422 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:31:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 21:31:22,451 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:31:22] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:31:43,327 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:31:43] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 21:31:49,229 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:31:49] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 21:31:59,890 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:31:59] "[33mGET /inventory/request HTTP/1.1[0m" 404 -
+2024-11-18 21:32:02,947 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:02] "[33mGET /inventory/purchase HTTP/1.1[0m" 404 -
+2024-11-18 21:32:27,269 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 21:32:27,286 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:27] "GET /login HTTP/1.1" 200 -
+2024-11-18 21:32:40,180 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 21:32:40,207 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:40] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:32:47,957 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:47] "[33mGET /maintenance/tasks HTTP/1.1[0m" 404 -
+2024-11-18 21:32:50,986 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:50] "[33mGET /maintenance/tasks HTTP/1.1[0m" 404 -
+2024-11-18 21:32:53,636 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:53] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 21:32:56,362 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:56] "[33mGET /equipment/maintain HTTP/1.1[0m" 404 -
+2024-11-18 21:32:59,332 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:32:59] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 21:33:05,853 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:33:05] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 21:33:09,337 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:33:09] "[33mGET /equipment/add HTTP/1.1[0m" 404 -
+2024-11-18 21:33:12,057 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:33:12] "[33mGET /equipment/remove HTTP/1.1[0m" 404 -
+2024-11-18 21:34:44,115 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:34:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 21:34:44,130 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:34:44] "GET /login HTTP/1.1" 200 -
+2024-11-18 21:35:57,899 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:35:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 21:35:57,926 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:35:57] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:36:00,810 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:36:00] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 21:36:31,506 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:36:31] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-18 21:36:31,543 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:36:31] "GET /labs/view HTTP/1.1" 200 -
+2024-11-18 21:36:35,163 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:36:35] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:36:37,198 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:36:37] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:37:20,795 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:20] "[32mGET /labs/access/3 HTTP/1.1[0m" 302 -
+2024-11-18 21:37:20,821 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:20] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:37:31,496 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:31] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:37:45,697 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 21:37:45,719 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:45] "GET /login HTTP/1.1" 200 -
+2024-11-18 21:37:54,402 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 21:37:54,433 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:54] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:37:59,400 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:37:59] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 21:38:10,390 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:10] "[32mPOST /labs/assignment/process/10/approve HTTP/1.1[0m" 302 -
+2024-11-18 21:38:10,421 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:10] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-18 21:38:16,644 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:16] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-18 21:38:16,832 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:16] "GET /login HTTP/1.1" 200 -
+2024-11-18 21:38:24,956 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 21:38:24,980 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:24] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:38:38,400 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:38] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:38:49,523 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:49] "[32mGET /labs/access/1 HTTP/1.1[0m" 302 -
+2024-11-18 21:38:49,578 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:49] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:38:59,073 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:38:59] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:39:00,950 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:39:00] "GET /labs/access/10 HTTP/1.1" 200 -
+2024-11-18 21:39:25,991 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:39:25] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 21:39:29,306 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 21:39:29] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-18 21:44:11,300 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\pkgs\\torchvision-0.20.1-py310_cu118\\lib\\site-packages\\torchvision\\datasets\\omniglot.py', reloading
+2024-11-18 21:44:11,301 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\pkgs\\torchvision-0.20.1-py310_cu118\\lib\\site-packages\\torchvision\\datasets\\omniglot.py', reloading
+2024-11-18 21:44:12,087 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 21:44:13,824 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 21:44:13,846 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 21:44:14,000 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:22:04,481 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:22:05,633 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:22:05,654 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:22:05,750 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:22:06,010 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:22:06] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-18 23:22:06,059 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:22:06] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:22:27,207 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:22:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:22:27,356 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:22:27] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:22:37,350 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:22:37] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 23:23:54,417 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:23:54,969 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:23:56,357 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:23:56,379 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:23:56,558 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:24:54,289 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:24:54] "[33mGET /equipment/maintain HTTP/1.1[0m" 404 -
+2024-11-18 23:24:57,476 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:24:57] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-18 23:24:57,504 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:24:57] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:25:03,781 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:25:03] "POST /login HTTP/1.1" 200 -
+2024-11-18 23:25:13,244 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:25:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:25:13,275 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:25:13] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:25:22,014 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:25:22] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 23:25:25,164 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:25:25] "[33mGET /equipment/maintain HTTP/1.1[0m" 404 -
+2024-11-18 23:25:28,046 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:25:28] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:26:03,191 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:26:03] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:26:48,964 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:26:48] "[33mGET /maintenance/tasks HTTP/1.1[0m" 404 -
+2024-11-18 23:26:51,934 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:26:51] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 23:26:55,613 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:26:55] "[33mGET /equipment/remove HTTP/1.1[0m" 404 -
+2024-11-18 23:28:35,368 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:28:35,369 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:28:35,370 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:28:36,056 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:28:37,529 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:28:37,550 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:28:37,650 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:29:20,852 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:29:20,852 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:29:20,857 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:29:21,467 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:29:22,768 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:29:22,790 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:29:22,928 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:29:31,744 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:29:31] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-18 23:29:31,762 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:29:31] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:29:51,562 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:29:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:29:51,596 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:29:51] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:29:56,207 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:29:56] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:30:02,082 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:30:02] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:30:19,781 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:30:19] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:31:58,834 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:31:58,835 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:31:58,837 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:31:58,840 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-18 23:31:59,746 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:32:01,234 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:32:01,255 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:32:01,348 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:32:01,932 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:32:01] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-18 23:32:01,950 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:32:01] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:32:10,805 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:32:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:32:10,837 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:32:10] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:32:14,673 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:32:14] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:34:23,333 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:34:23] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:34:38,257 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:34:38] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:34:44,951 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:34:44] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:35:00,215 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:00] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:35:29,011 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2024-11-18 23:35:29,028 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\helpers.py', reloading
+2024-11-18 23:35:29,044 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:29] "[35m[1mPOST /equipment/report/4 HTTP/1.1[0m" 500 -
+2024-11-18 23:35:29,044 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\werkzeug\\routing.py', reloading
+2024-11-18 23:35:29,335 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:29] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 23:35:29,358 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:29] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 23:35:29,513 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:29] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:35:29,604 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:29] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 23:35:30,041 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:35:31,463 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:35:31,488 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:35:31,586 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:35:31,848 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:35:31] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:40:04,110 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:40:04,716 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:40:05,932 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:40:05,953 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:40:06,045 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:41:10,490 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:10] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-18 23:41:10,508 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:10] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:41:20,643 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:41:20,674 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:20] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:41:27,535 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:27] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:41:33,221 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:33] "[35m[1mPOST /equipment/report/4 HTTP/1.1[0m" 500 -
+2024-11-18 23:41:33,403 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:33] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 23:41:33,405 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:33] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 23:41:33,731 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:33] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:41:33,762 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:33] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 23:41:58,029 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:58] "[35m[1mPOST /equipment/report/5 HTTP/1.1[0m" 500 -
+2024-11-18 23:41:58,066 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:58] "GET /equipment/report/5?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 23:41:58,078 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:58] "GET /equipment/report/5?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 23:41:58,531 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:58] "GET /equipment/report/5?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:41:58,700 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:58] "GET /equipment/report/5?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 23:41:59,139 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:41:59] "GET /equipment/report/5?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:43:53,659 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:43:53,662 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:43:54,916 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:43:56,474 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:43:56,495 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:43:56,584 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:45:30,691 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:30] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-18 23:45:30,709 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:30] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:45:40,856 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:45:40,886 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:40] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:45:48,368 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:48] "[33mGET /maintenance/reports HTTP/1.1[0m" 404 -
+2024-11-18 23:45:51,901 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:51] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:45:58,660 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:58] "[35m[1mPOST /equipment/report/4 HTTP/1.1[0m" 500 -
+2024-11-18 23:45:58,837 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:58] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 23:45:58,842 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:58] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 23:45:59,318 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:59] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:45:59,346 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:45:59] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 23:46:31,905 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\werkzeug\\exceptions.py', reloading
+2024-11-18 23:46:33,038 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:46:34,636 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:46:34,658 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:46:34,747 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:47:48,011 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:47:48] "[32mPOST /equipment/report/4 HTTP/1.1[0m" 302 -
+2024-11-18 23:47:48,037 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:47:48] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:47:59,895 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:47:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:47:59,927 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:47:59] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:48:01,995 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:48:01] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:48:10,227 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:48:10] "[35m[1mPOST /equipment/report/4 HTTP/1.1[0m" 500 -
+2024-11-18 23:48:10,400 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:48:10] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 23:48:10,421 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:48:10] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 23:48:10,700 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:48:10] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:48:10,753 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:48:10] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 23:51:56,862 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:51:56,863 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:51:56,864 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:51:57,087 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:51:58,440 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:51:58,462 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:51:58,552 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:55:13,275 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:13] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-18 23:55:13,297 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:13] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:55:23,150 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:55:23,185 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:23] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:55:25,158 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:25] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:55:29,964 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:29] "[35m[1mPOST /equipment/report/4 HTTP/1.1[0m" 500 -
+2024-11-18 23:55:30,198 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:30] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-18 23:55:30,230 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:30] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-18 23:55:30,644 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:30] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-18 23:55:30,663 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:55:30] "GET /equipment/report/4?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-18 23:57:11,422 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:57:11,423 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:57:11,424 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-18 23:57:12,022 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-18 23:57:13,672 - werkzeug - WARNING -  * Debugger is active!
+2024-11-18 23:57:13,693 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-18 23:57:13,783 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-18 23:57:14,489 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:14] "[32mPOST /equipment/report/4 HTTP/1.1[0m" 302 -
+2024-11-18 23:57:14,506 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:14] "GET /login HTTP/1.1" 200 -
+2024-11-18 23:57:32,141 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-18 23:57:32,172 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:32] "GET /dashboard HTTP/1.1" 200 -
+2024-11-18 23:57:38,232 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:38] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-18 23:57:42,389 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:42] "[32mPOST /equipment/report/4 HTTP/1.1[0m" 302 -
+2024-11-18 23:57:42,415 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2024 23:57:42] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-19 00:00:03,638 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-19 00:00:03,640 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-19 00:00:04,818 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-19 00:00:08,851 - werkzeug - WARNING -  * Debugger is active!
+2024-11-19 00:00:08,876 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-19 00:00:09,893 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-19 00:00:36,701 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-19 00:00:36,702 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-19 00:00:36,703 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-19 00:00:37,872 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-19 00:00:39,149 - werkzeug - WARNING -  * Debugger is active!
+2024-11-19 00:00:39,173 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-19 00:00:39,277 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-19 00:00:42,146 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:00:42] "[32mGET /equipment/check HTTP/1.1[0m" 302 -
+2024-11-19 00:00:42,176 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:00:42] "GET /login HTTP/1.1" 200 -
+2024-11-19 00:00:52,169 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:00:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-19 00:00:52,241 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:00:52] "GET /dashboard HTTP/1.1" 200 -
+2024-11-19 00:00:57,412 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:00:57] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-19 00:01:01,730 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:01] "[32mPOST /equipment/report/4 HTTP/1.1[0m" 302 -
+2024-11-19 00:01:01,784 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:01] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-19 00:01:25,044 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-19 00:01:26,123 - werkzeug - WARNING -  * Debugger is active!
+2024-11-19 00:01:26,144 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-19 00:01:26,249 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-19 00:01:35,109 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:35] "[32mPOST /equipment/report/5 HTTP/1.1[0m" 302 -
+2024-11-19 00:01:35,136 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:35] "GET /login HTTP/1.1" 200 -
+2024-11-19 00:01:46,507 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:46] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-19 00:01:46,537 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:46] "GET /dashboard HTTP/1.1" 200 -
+2024-11-19 00:01:52,953 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:01:52] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-19 00:02:00,067 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:02:00] "[32mPOST /equipment/report/4 HTTP/1.1[0m" 302 -
+2024-11-19 00:02:00,084 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:02:00] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-19 00:04:30,615 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:04:30] "[32mPOST /equipment/report/4 HTTP/1.1[0m" 302 -
+2024-11-19 00:04:30,649 - werkzeug - INFO - 127.0.0.1 - - [19/Nov/2024 00:04:30] "GET /equipment/check HTTP/1.1" 200 -

@@ -147,7 +147,6 @@ class LabManagement:
 
     @staticmethod
     def get_user_bookings(user_id: int) -> List[Dict]:
-        """Get all bookings for a specific user"""
         try:
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
@@ -159,7 +158,7 @@ class LabManagement:
                         lb.end_time,
                         lb.status,
                         l.location,
-                        l.size
+                        l.info
                     FROM lab_bookings lb
                     JOIN labs l ON lb.labID = l.labID
                     WHERE lb.userID = ?
@@ -171,7 +170,45 @@ class LabManagement:
             print(f"Database error: {e}")
             return []
 
+    @staticmethod
+    def get_booking(booking_id: int) -> Optional[Dict]:
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT 
+                        lb.*,
+                        l.location,
+                        l.info
+                    FROM lab_bookings lb
+                    JOIN labs l ON lb.labID = l.labID
+                    WHERE lb.bookingID = ?
+                """, (booking_id,))
+                columns = [description[0] for description in cursor.description]
+                row = cursor.fetchone()
+                return dict(zip(columns, row)) if row else None
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")
+            return None
 
+    @staticmethod
+    def get_current_active_booking(user_id: int) -> Optional[Dict]:
+        try:
+            current_time = datetime.now()
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT bookingID, labID
+                    FROM lab_bookings
+                    WHERE userID = ?
+                    AND status = 'approved'
+                    AND start_time <= ?
+                    AND end_time >= ?
+                """, (user_id, current_time, current_time))
+                result = cursor.fetchone()
+                return {'booking_id': result[0], 'lab_id': result[1]} if result else None
+        except sqlite3.Error:
+            return None
 
     @staticmethod
     def update_booking_status(booking_id: int, action: str) -> bool:
