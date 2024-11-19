@@ -18,11 +18,11 @@
                 {% for item in equipment %}
                 <tr>
                     <td class="px-6 py-4">
-                        <div class="text-sm font-bold">{{ item.equipType }}</div>
+                        <div class="text-sm font-medium text-gray-900">{{ item.equipType }}</div>
                         <div class="text-sm text-gray-500">ID: {{ item.equipID }}</div>
                     </td>
                     <td class="px-6 py-4">
-                        <span class="px-2 py-1 text-sm rounded-full
+                        <span class="px-2 py-1 text-xs rounded-full
                             {% if item.status == 'operational' %}bg-green-100 text-green-800
                             {% else %}bg-red-100 text-red-800{% endif %}">
                             {{ item.status }}
@@ -33,12 +33,12 @@
                     </td>
                     <td class="px-6 py-4">
                         {% if item.status == 'operational' %}
-                        <form method="POST" action="{{ url_for('report_issue', equip_id=item.equipID) }}">
+                        <form method="POST" action="{{ url_for('report_issue', equip_id=item.equipID) }}" class="inline">
                             <input type="text" name="issue"
-                                   class="border rounded px-2 py-1 text-sm"
-                                   placeholder="Describe issue" required>
+                                   class="border rounded px-2 py-1"
+                                   placeholder="Issue description" required>
                             <button type="submit"
-                                    class="ml-2 px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700">
+                                    class="ml-2 bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
                                 Report Issue
                             </button>
                         </form>
@@ -48,6 +48,13 @@
                     </td>
                 </tr>
                 {% endfor %}
+                {% if not equipment %}
+                <tr>
+                    <td colspan="4" class="px-6 py-4 text-center text-gray-500">
+                        No equipment found in the system
+                    </td>
+                </tr>
+                {% endif %}
             </tbody>
         </table>
     </div>

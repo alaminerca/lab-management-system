@@ -81,3 +81,13 @@ CREATE TABLE IF NOT EXISTS equipment_issues (
     FOREIGN KEY (reported_by) REFERENCES users(userID),
     FOREIGN KEY (resolved_by) REFERENCES users(userID)
 );
+
+CREATE TABLE IF NOT EXISTS inventory_requests (
+    request_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    equipment_type TEXT NOT NULL,
+    quantity INTEGER NOT NULL,
+    request_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status TEXT DEFAULT 'pending',
+    response_date DATETIME,
+    notes TEXT
+);

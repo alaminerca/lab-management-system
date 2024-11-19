@@ -32,7 +32,8 @@ USERS = {
         'password': 'test789',
         'role': 'it_staff',
         'name': 'IT Staff User',
-        'permissions': ['maintain_lab', 'add_equipment', 'remove_equipment', 'repair_equipment', 'check_equipment']
+        'permissions': ['maintain_lab', 'add_equipment', 'remove_equipment',
+                       'repair_equipment', 'check_equipment', 'maintain_equipment']
     }
 }
 
@@ -196,7 +197,7 @@ def confirm_booking():
     return redirect(url_for('view_labs'))
 
 
-# In app.py, replace or add these routes:
+
 
 @app.route('/labs/assignments')
 @login_required
@@ -330,16 +331,42 @@ def report_issue(equip_id):
     return redirect(url_for('check_equipment'))
 
 
-@app.route('/equipment/maintain')
+@app.route('/maintenance/tasks')
+@login_required
+def view_tasks():
+    if 'maintain_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    # Get all maintenance tasks (reported issues)
+    tasks = EquipmentManagement.get_maintenance_tasks()
+    return render_template('maintenance/tasks.html', tasks=tasks)
+
+
+@app.route('/equipment/maintain', methods=['GET', 'POST'])
 @login_required
 def maintain_equipment():
     if 'maintain_equipment' not in session.get('permissions', []):
         flash('Unauthorized access')
         return redirect(url_for('dashboard'))
 
-    # Get equipment with reported issues
-    issues = EquipmentManagement.get_reported_issues()
-    return render_template('equipment/maintain.html', issues=issues)
+    if request.method == 'POST':
+        task_id = request.form.get('task_id')
+        resolution = request.form.get('resolution')
+
+        if EquipmentManagement.resolve_maintenance(task_id, resolution, session['user_id']):
+            flash('Maintenance completed successfully')
+        else:
+            flash('Failed to complete maintenance')
+        return redirect(url_for('view_tasks'))
+
+    # Get task details if task_id provided
+    task_id = request.args.get('task_id')
+    task = None
+    if task_id:
+        task = EquipmentManagement.get_maintenance_task(task_id)
+
+    return render_template('equipment/maintain.html', task=task)
 
 
 @app.route('/equipment/maintain/<int:issue_id>', methods=['POST'])
@@ -355,6 +382,69 @@ def resolve_issue(issue_id):
     else:
         flash('Failed to resolve issue')
     return redirect(url_for('maintain_equipment'))
+
+
+@app.route('/inventory/request', methods=['GET', 'POST'])
+@login_required
+def request_from_inventory():
+    if 'request_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    if request.method == 'POST':
+        equip_type = request.form.get('equipment_type')
+        quantity = request.form.get('quantity')
+        reason = request.form.get('reason')
+
+        # Simulate inventory check (in real system, this would be an API call)
+        response = EquipmentManagement.check_inventory(equip_type, quantity)
+
+        if response['available']:
+            flash(f'Equipment available. IT Staff will be notified to add {quantity} {equip_type}(s).')
+        else:
+            flash('Equipment not available in inventory. Consider purchase request.')
+
+        return redirect(url_for('inventory_status'))
+
+    return render_template('inventory/request.html')
+
+
+@app.route('/inventory/status')
+@login_required
+def inventory_status():
+    if 'request_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    requests = EquipmentManagement.get_inventory_requests(session['user_id'])
+    return render_template('inventory/status.html', requests=requests)
+
+
+@app.route('/equipment/add')
+@login_required
+def add_equipment():
+    if 'add_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    # Get pending requests from inventory
+    pending_requests = EquipmentManagement.get_pending_inventory_requests()
+    return render_template('equipment/add.html', pending_requests=pending_requests)
+
+
+@app.route('/equipment/add/<int:request_id>', methods=['POST'])
+@login_required
+def confirm_add_equipment(request_id):
+    if 'add_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    if EquipmentManagement.add_equipment_from_request(request_id):
+        flash('Equipment added successfully')
+    else:
+        flash('Failed to add equipment')
+
+    return redirect(url_for('add_equipment'))
 
 if __name__ == '__main__':
     app.run(debug=True)
