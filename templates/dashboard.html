@@ -6,6 +6,7 @@
     <p class="text-gray-600">Role: {{ session.role | title }}</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        {% if 'view_lab' in session.permissions or 'book_lab' in session.permissions %}
         <!-- Lab Management Card -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-4">Lab Management</h2>
@@ -27,20 +28,46 @@
                     Assign Labs
                 </a>
                 {% endif %}
-
-                {% if 'access_lab' in session.permissions and current_active_booking %}
-                <a href="{{ url_for('access_lab', booking_id=current_active_booking.booking_id) }}"
-                   class="block p-2 bg-green-50 hover:bg-green-100 rounded">
-                    Access Lab {{ current_active_booking.lab_id }}
-                </a>
-                {% endif %}
             </div>
         </div>
+        {% endif %}
 
         <!-- Equipment Management Card -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-4">Equipment Management</h2>
             <div class="space-y-2">
+                {% if session.role == 'it_staff' %}
+                <a href="/equipment/maintain" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Maintain Equipment
+                </a>
+                <a href="/equipment/check" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Check Equipment
+                </a>
+                <a href="/equipment/add" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Add Equipment
+                </a>
+                <a href="/equipment/remove" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Remove Equipment
+                </a>
+                {% endif %}
+<!-- Inside Equipment Management Card for Admin -->
+            {% if session.role == 'administrator' %}
+            <div class="space-y-2">
+                <a href="/inventory/request" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Request Equipment
+                </a>
+                <a href="/inventory/purchase" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Purchase Equipment
+                </a>
+                <a href="/equipment/check" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Check Equipment
+                </a>
+                <a href="/maintenance/reports" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
+                    Maintenance Reports
+                </a>
+            </div>
+            {% endif %}
+
                 {% if 'request_equipment' in session.permissions %}
                 <a href="/inventory/request" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
                     Request Equipment
@@ -52,26 +79,11 @@
                     Purchase Equipment
                 </a>
                 {% endif %}
-
-                {% if session.role == 'it_staff' %}
-                <a href="/equipment/maintain" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
-                    Maintain Equipment
-                </a>
-                <a href="{{ url_for('check_equipment') }}" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
-                    Check Equipment
-                </a>
-                <a href="/equipment/add" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
-                    Add Equipment
-                </a>
-                <a href="/equipment/remove" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
-                    Remove Equipment
-                </a>
-                {% endif %}
             </div>
         </div>
 
         {% if session.role == 'it_staff' %}
-        <!-- Maintenance Card (IT Staff Only) -->
+        <!-- Maintenance Card -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-4">Maintenance</h2>
             <div class="space-y-2">

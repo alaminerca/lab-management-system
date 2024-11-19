@@ -14,7 +14,13 @@ USERS = {
         'password': 'test123',
         'role': 'administrator',
         'name': 'Admin User',
-        'permissions': ['view_lab', 'assign_lab', 'request_equipment', 'purchase_equipment']
+        'permissions': [
+            'view_lab',
+            'assign_lab',
+            'request_equipment',
+            'purchase_equipment',
+            'check_equipment',
+            'view_maintenance_reports' ]
     },
     '456': {
         'password': 'test456',
@@ -32,8 +38,13 @@ USERS = {
         'password': 'test789',
         'role': 'it_staff',
         'name': 'IT Staff User',
-        'permissions': ['maintain_lab', 'add_equipment', 'remove_equipment',
-                       'repair_equipment', 'check_equipment', 'maintain_equipment']
+        'permissions': [
+            'maintain_equipment',
+            'add_equipment',
+            'remove_equipment',
+            'check_equipment',
+            'view_maintenance_reports'
+        ]
     }
 }
 
@@ -71,8 +82,6 @@ def login():
             return redirect(url_for('dashboard'))
         return render_template('login.html', error="Invalid credentials")
     return render_template('login.html')
-
-
 
 
 @app.route('/labs/view')
@@ -195,8 +204,6 @@ def confirm_booking():
         flash('An error occurred while processing your booking')
 
     return redirect(url_for('view_labs'))
-
-
 
 
 @app.route('/labs/assignments')
@@ -343,6 +350,25 @@ def view_tasks():
     return render_template('maintenance/tasks.html', tasks=tasks)
 
 
+@app.route('/equipment')
+@login_required
+def equipment_dashboard():
+    if session.role == 'administrator':
+        return redirect(url_for('inventory_status'))
+    elif session.role == 'it_staff':
+        return redirect(url_for('check_equipment'))
+    else:
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+@app.route('/labs')
+@login_required
+def labs_dashboard():
+    if 'view_lab' in session.get('permissions', []):
+        return redirect(url_for('view_labs'))
+    flash('Unauthorized access')
+    return redirect(url_for('dashboard'))
+
 @app.route('/equipment/maintain', methods=['GET', 'POST'])
 @login_required
 def maintain_equipment():
@@ -409,6 +435,41 @@ def request_from_inventory():
     return render_template('inventory/request.html')
 
 
+@app.route('/inventory/purchase', methods=['GET', 'POST'])
+@login_required
+def purchase_equipment():
+    if 'purchase_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    if request.method == 'POST':
+        equip_type = request.form.get('equipment_type')
+        quantity = request.form.get('quantity')
+        justification = request.form.get('justification')
+
+        if EquipmentManagement.submit_purchase_request(equip_type, quantity, justification, session['user_id']):
+            flash('Purchase request submitted successfully')
+        else:
+            flash('Failed to submit purchase request')
+        return redirect(url_for('inventory_status'))
+
+    return render_template('inventory/purchase.html')
+
+
+@app.route('/inventory/purchase/<int:request_id>/<string:action>', methods=['POST'])
+@login_required
+def process_purchase(request_id, action):
+    if 'purchase_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    if action == 'delivered':
+        EquipmentManagement.mark_purchase_delivered(request_id)
+        flash('Equipment delivered from inventory')
+
+    return redirect(url_for('inventory_status'))
+
+
 @app.route('/inventory/status')
 @login_required
 def inventory_status():
@@ -445,6 +506,43 @@ def confirm_add_equipment(request_id):
         flash('Failed to add equipment')
 
     return redirect(url_for('add_equipment'))
+
+
+@app.route('/equipment/remove')
+@login_required
+def remove_equipment():
+    if 'remove_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    equipment_list = EquipmentManagement.get_all_equipment()
+    return render_template('equipment/remove.html', equipment=equipment_list)
+
+
+@app.route('/equipment/remove/<int:equip_id>', methods=['POST'])
+@login_required
+def confirm_remove_equipment(equip_id):
+    if 'remove_equipment' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    reason = request.form.get('reason')
+    if EquipmentManagement.remove_equipment(equip_id, reason, session['user_id']):
+        flash('Equipment removed successfully')
+    else:
+        flash('Failed to remove equipment')
+    return redirect(url_for('remove_equipment'))
+
+
+@app.route('/maintenance/reports')
+@login_required
+def maintenance_reports():
+    if 'view_maintenance_reports' not in session.get('permissions', []):
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+
+    maintenance_history = EquipmentManagement.get_maintenance_history()
+    return render_template('maintenance/reports.html', history=maintenance_history)
 
 if __name__ == '__main__':
     app.run(debug=True)

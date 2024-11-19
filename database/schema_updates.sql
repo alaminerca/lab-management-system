@@ -82,6 +82,16 @@ CREATE TABLE IF NOT EXISTS equipment_issues (
     FOREIGN KEY (resolved_by) REFERENCES users(userID)
 );
 
+CREATE TABLE IF NOT EXISTS equipment_removals (
+    removal_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    equipID INTEGER,
+    removed_by INTEGER,
+    removal_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    reason TEXT,
+    FOREIGN KEY (equipID) REFERENCES equipment(equipID),
+    FOREIGN KEY (removed_by) REFERENCES users(userID)
+);
+
 CREATE TABLE IF NOT EXISTS inventory_requests (
     request_id INTEGER PRIMARY KEY AUTOINCREMENT,
     equipment_type TEXT NOT NULL,

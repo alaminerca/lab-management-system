@@ -112,8 +112,7 @@ class EquipmentManagement:
         except sqlite3.Error:
             return False
 
-    @staticmethod
-    @staticmethod
+
     @staticmethod
     def get_all_equipment() -> List[Dict]:
         """Retrieve all equipment with their status"""
@@ -210,12 +209,36 @@ class EquipmentManagement:
 
     @staticmethod
     def get_inventory_requests(user_id: int) -> List[Dict]:
-        """Get all inventory requests for admin"""
+        """Get all inventory and purchase requests"""
         try:
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
                 cursor.execute("""
-                    SELECT * FROM inventory_requests
+                    SELECT equipment_type, quantity, request_date, status, NULL as justification
+                    FROM inventory_requests
+                    UNION ALL
+                    SELECT equipment_type, quantity, request_date, status, justification
+                    FROM purchase_requests
+                    ORDER BY request_date DESC
+                """)
+                columns = [desc[0] for desc in cursor.description]
+                return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")
+            return []
+
+    @staticmethod
+    def get_inventory_requests(user_id: int) -> List[Dict]:
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                # Note the different ID column names
+                cursor.execute("""
+                    SELECT 'request' as type, request_id as id, equipment_type, quantity, request_date, status
+                    FROM inventory_requests
+                    UNION ALL
+                    SELECT 'purchase' as type, purchase_id as id, equipment_type, quantity, request_date, status
+                    FROM purchase_requests
                     ORDER BY request_date DESC
                 """)
                 columns = [desc[0] for desc in cursor.description]
@@ -226,37 +249,67 @@ class EquipmentManagement:
 
     @staticmethod
     def get_pending_inventory_requests() -> List[Dict]:
-        """Get pending requests from inventory"""
         try:
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
                 cursor.execute("""
-                    SELECT * FROM inventory_requests 
+                    SELECT 
+                        request_id, 
+                        equipment_type, 
+                        quantity, 
+                        request_date,
+                        'inventory' as source
+                    FROM inventory_requests 
+                    WHERE status = 'pending'
+                    UNION ALL 
+                    SELECT 
+                        purchase_id, 
+                        equipment_type, 
+                        quantity, 
+                        request_date,
+                        'purchase' as source
+                    FROM purchase_requests 
                     WHERE status = 'pending'
                     ORDER BY request_date DESC
                 """)
                 columns = [desc[0] for desc in cursor.description]
-                return [dict(zip(columns, row)) for row in cursor.fetchall()]
+                rows = [dict(zip(columns, row)) for row in cursor.fetchall()]
+                # Rename request_id to match template
+                return rows
         except sqlite3.Error as e:
             print(f"Database error: {e}")
             return []
 
     @staticmethod
     def add_equipment_from_request(request_id: int) -> bool:
-        """Add equipment from inventory request"""
         try:
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
+                print(f"Processing request ID: {request_id}")  # Debug print
 
-                # Get request details
-                cursor.execute("SELECT equipment_type, quantity FROM inventory_requests WHERE request_id = ?",
-                               (request_id,))
-                request_data = cursor.fetchone()
+                # Check if already processed
+                cursor.execute("""
+                    SELECT equipment_type, quantity 
+                    FROM (
+                        SELECT request_id as id, equipment_type, quantity 
+                        FROM inventory_requests 
+                        WHERE status = 'pending'
+                        UNION ALL
+                        SELECT purchase_id as id, equipment_type, quantity 
+                        FROM purchase_requests 
+                        WHERE status = 'pending'
+                    ) WHERE id = ?
+                """, (request_id,))
 
-                if not request_data:
+                result = cursor.fetchone()
+                print(f"Query result: {result}")  # Debug print
+
+                if not result:
+                    print("No pending request found")  # Debug print
                     return False
 
-                equip_type, quantity = request_data
+                equip_type, quantity = result
+                print(f"Adding {quantity} {equip_type}(s)")  # Debug print
 
                 # Add equipment
                 for _ in range(quantity):
@@ -265,14 +318,55 @@ class EquipmentManagement:
                         VALUES (?, 'operational', datetime('now'))
                     """, (equip_type,))
 
-                # Update request status
+                # Update request status in both tables
                 cursor.execute("""
                     UPDATE inventory_requests 
-                    SET status = 'completed',
-                        response_date = datetime('now')
-                    WHERE request_id = ?
+                    SET status = 'completed'
+                    WHERE request_id = ? AND status = 'pending'
                 """, (request_id,))
 
+                cursor.execute("""
+                    UPDATE purchase_requests 
+                    SET status = 'completed'
+                    WHERE purchase_id = ? AND status = 'pending'
+                """, (request_id,))
+
+                conn.commit()
+                print("Transaction completed")  # Debug print
+                return True
+
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")  # Debug print
+            return False
+
+    @staticmethod
+    def remove_equipment(equip_id: int, reason: str, staff_id: int) -> bool:
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+
+                # Check if equipment exists and is operational
+                cursor.execute("SELECT status FROM equipment WHERE equipID = ?", (equip_id,))
+                result = cursor.fetchone()
+                if not result:
+                    return False
+
+                # Update equipment status to removed
+                cursor.execute("""
+                    UPDATE equipment 
+                    SET status = 'removed',
+                        last_checked = datetime('now')
+                    WHERE equipID = ?
+                """, (equip_id,))
+
+                # Log removal
+                cursor.execute("""
+                    INSERT INTO equipment_removals 
+                    (equipID, removed_by, removal_date, reason)
+                    VALUES (?, ?, datetime('now'), ?)
+                """, (equip_id, staff_id, reason))
+
+                conn.commit()
                 return True
         except sqlite3.Error as e:
             print(f"Database error: {e}")
@@ -362,3 +456,64 @@ class EquipmentManagement:
         except sqlite3.Error as e:
             print(f"Database error: {e}")
             return False
+
+    @staticmethod
+    def submit_purchase_request(equip_type: str, quantity: int, justification: str, requester_id: int) -> bool:
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    INSERT INTO purchase_requests 
+                    (equipment_type, quantity, justification, requester_id, status, request_date)
+                    VALUES (?, ?, ?, ?, 'pending', datetime('now'))
+                """, (equip_type, quantity, justification, requester_id))
+                return True
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")
+            return False
+
+    @staticmethod
+    def mark_purchase_delivered(request_id: int) -> bool:
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                # Update purchase request status
+                cursor.execute("""
+                    UPDATE purchase_requests 
+                    SET status = 'delivered',
+                        delivery_date = datetime('now')
+                    WHERE request_id = ? AND status = 'pending'
+                """, (request_id,))
+                return True
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")
+            return False
+
+    @staticmethod
+    def get_maintenance_history() -> List[Dict]:
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT 
+                        ei.issueID,
+                        e.equipID,
+                        e.equipType,
+                        ei.description as issue,
+                        ei.report_date,
+                        ei.resolved_date,
+                        ei.resolution,
+                        e.status,
+                        CASE 
+                            WHEN ei.resolved_date IS NOT NULL THEN 'Resolved'
+                            ELSE 'Pending'
+                        END as maintenance_status
+                    FROM equipment_issues ei
+                    JOIN equipment e ON ei.equipID = e.equipID
+                    ORDER BY ei.report_date DESC
+                """)
+                columns = [desc[0] for desc in cursor.description]
+                return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        except sqlite3.Error as e:
+            print(f"Database error: {e}")
+            return []
