@@ -1,5 +1,18 @@
+# Core Flask - used in app.py
 Flask==2.0.1
 Werkzeug==2.0.1
-pytest==7.1.1
+
+# Database - used in all management modules
+SQLite3  # Built into Python, no need to install
+
+# Date/Time Handling - used in lab_management.py and equipment_management.py
 python-dateutil==2.8.2
-Flask-SQLAlchemy==2.5.1
+
+# Testing - used for development
+pytest==7.1.1
+
+# Session & Security - used in app.py for user sessions
+itsdangerous==2.0.1  # Required by Flask for session handling
+
+# Template Engine - used by Flask for HTML templates
+Jinja2==3.0.1  # Required by Flask for templating
