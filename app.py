@@ -91,8 +91,22 @@ def view_labs():
         flash('You do not have permission to view labs')
         return redirect(url_for('dashboard'))
 
-    labs = LabManagement.get_all_labs()
-    return render_template('labs/view.html', labs=labs, today=date.today().isoformat())
+    try:
+        labs = LabManagement.get_all_labs()
+        if not labs:  # If no labs are found
+            flash('No labs are currently available in the system')
+
+        current_time = datetime.now()
+        return render_template(
+            'labs/view.html',
+            labs=labs,  # Will be an empty list if no labs found
+            current_time=current_time,
+            today=date.today().isoformat()
+        )
+    except Exception as e:
+        print(f"Error in view_labs: {e}")
+        flash('An error occurred while retrieving labs')
+        return redirect(url_for('dashboard'))
 
 
 @app.route('/logout')
@@ -104,65 +118,49 @@ def logout():
 @app.route('/labs/book', methods=['GET', 'POST'])
 @login_required
 def book_lab():
-    print("Entering book_lab route")  # Debug print 1
-
     if 'book_lab' not in session.get('permissions', []):
         flash('You do not have permission to book labs')
         return redirect(url_for('view_labs'))
 
     if request.method == 'POST':
-        print("POST request received")  # Debug print 2
         try:
-            # Get form data
             lab_id = request.form.get('lab_id')
             booking_date = request.form.get('date')
             start_time = request.form.get('start_time')
             end_time = request.form.get('end_time')
 
-            print(f"Form data received:")  # Debug print 3
-            print(f"Lab ID: {lab_id}")
-            print(f"Date: {booking_date}")
-            print(f"Start Time: {start_time}")
-            print(f"End Time: {end_time}")
-
-            # Validate input
             if not all([lab_id, booking_date, start_time, end_time]):
                 flash('All fields are required')
                 return redirect(url_for('view_labs'))
 
-            # Combine date and time
             try:
                 start_datetime = datetime.strptime(f"{booking_date} {start_time}", "%Y-%m-%d %H:%M")
                 end_datetime = datetime.strptime(f"{booking_date} {end_time}", "%Y-%m-%d %H:%M")
-                print(f"Datetime conversion successful")  # Debug print 4
+
+                # Check if booking is in the past
+                if start_datetime < datetime.now():
+                    flash('Cannot book labs in the past')
+                    return redirect(url_for('view_labs'))
+
             except ValueError:
                 flash('Invalid date or time format')
                 return redirect(url_for('view_labs'))
 
             # Check lab availability
-            is_available = LabManagement.is_lab_available(lab_id, start_datetime, end_datetime)
-            print(f"Lab availability check: {is_available}")  # Debug print 5
-
-            if not is_available:
+            if not LabManagement.is_lab_available(lab_id, start_datetime, end_datetime):
                 flash('Lab is not available for the selected time slot')
                 return redirect(url_for('view_labs'))
 
             # Create booking
-            booking_result = LabManagement.book_lab(session['user_id'], lab_id, start_datetime, end_datetime)
-            print(f"Booking result: {booking_result}")  # Debug print 6
-
-            if booking_result:
+            if LabManagement.book_lab(session['user_id'], lab_id, start_datetime, end_datetime):
                 flash(f'Lab {lab_id} booked successfully for {booking_date} from {start_time} to {end_time}')
-                print("Success message flashed")  # Debug print 7
             else:
                 flash('Failed to book lab')
-                print("Failure message flashed")  # Debug print 8
 
-            print("About to redirect")  # Debug print 9
             return redirect(url_for('view_labs'))
 
         except Exception as e:
-            print(f"Error in book_lab: {str(e)}")  # Debug print 10
+            print(f"Error in book_lab: {str(e)}")
             flash('An error occurred while processing your booking')
             return redirect(url_for('view_labs'))
 

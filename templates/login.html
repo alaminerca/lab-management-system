@@ -1,41 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Management System - Login</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="max-w-md w-full px-6 py-8 bg-white shadow-md rounded-lg">
-            <h2 class="text-2xl font-bold text-center mb-8">Lab Management System</h2>
+{% extends "base.html" %}
 
-            {% if error %}
-            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
-                {{ error }}
-            </div>
-            {% endif %}
-
-            <form method="POST" class="space-y-6">
-                <div>
-                    <label class="block text-gray-700 text-sm font-bold mb-2">User ID</label>
-                    <input type="text" name="user_id" required
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-
-                <div>
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                    <input type="password" name="password" required
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-
-                <button type="submit"
-                        class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    Login
-                </button>
-            </form>
+{% block content %}
+<div class="min-h-screen bg-gray-100">
+    <!-- University Header Banner -->
+    <div class="w-full bg-[#004976] py-16 text-center text-white">
+        <div class="container mx-auto px-8">
+            <img src="/static/images/IU_ALL_H_COLOR_RGB.svg" alt="IU Logo" class="h-24 mx-auto mb-8">
+            <h1 class="text-4xl text-black text-opacity-50 font-bold mb-4">Lab Management System</h1>
+            <p class="text-2xl text-black text-opacity-50">Islamic University of Madinah</p>
         </div>
     </div>
-</body>
-</html>
+
+    <!-- Login Card -->
+    <div class="container mx-auto px-8 -mt-8">
+        <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+            <!-- Card Header -->
+            <div class="bg-[#004976] px-8 py-6">
+                <h2 class="text-2xl font-bold text-white text-center">System Login</h2>
+            </div>
+
+            <!-- Login Form -->
+            <div class="p-8">
+                <form method="POST" action="{{ url_for('login') }}" class="space-y-6">
+                    {% if error %}
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+
+                    <div>
+                        <label class="block text-xl font-medium text-gray-700 mb-2">User ID</label>
+                        <input type="text" name="user_id" required
+                               class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#004976] focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label class="block text-xl font-medium text-gray-700 mb-2">Password</label>
+                        <input type="password" name="password" required
+                               class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#004976] focus:border-transparent">
+                    </div>
+
+                    <button type="submit"
+                            class="w-full px-6 py-4 bg-[#004976] text-black text-xl font-medium rounded-lg hover:bg-[#005d94] transition-colors">
+                        Login
+                    </button>
+                </form>
+
+                <!-- Help Link -->
+                <div class="mt-6 text-center">
+                    <p class="text-lg text-gray-600">
+                        Need help? Contact
+                        <a href="#" class="text-[#004976] hover:underline">IT Support</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- University Features -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 mb-16">
+            <!-- Feature 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div class="text-[#004976] mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Accredited Labs</h3>
+                <p class="text-gray-600 text-lg">ABET accredited Computer Science facilities</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div class="text-[#004976] mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Modern Facilities</h3>
+                <p class="text-gray-600 text-lg">State-of-the-art computer labs</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div class="text-[#004976] mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Excellence</h3>
+                <p class="text-gray-600 text-lg">Leading in education and research</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div class="text-[#004976] mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Student Support</h3>
+                <p class="text-gray-600 text-lg">24/7 technical assistance</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

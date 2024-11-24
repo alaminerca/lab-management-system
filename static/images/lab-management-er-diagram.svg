@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <style>
+    .entity {
+      fill: #f0f0f0;
+      stroke: #ccc;
+      stroke-width: 1px;
+      rx: 10px;
+    }
+    .relationship {
+      fill: none;
+      stroke: #aaa;
+      stroke-width: 1.5px;
+    }
+    .cardinality {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .attribute {
+      fill: #e0e0e0;
+      stroke: #bbb;
+      stroke-width: 1px;
+      rx: 5px;
+    }
+    text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- Entities -->
+  <rect class="entity" x="50" y="50" width="160" height="160" rx="10">
+    <title>User</title>
+    <text x="80" y="80">User</text>
+    <text x="80" y="100">userID (PK)</text>
+    <text x="80" y="120">name</text>
+    <text x="80" y="140">role</text>
+    <text x="80" y="160">contact_info</text>
+    <text x="80" y="180">password_hash</text>
+  </rect>
+
+  <rect class="entity" x="300" y="50" width="160" height="120" rx="10">
+    <title>Lab</title>
+    <text x="330" y="80">Lab</text>
+    <text x="330" y="100">labID (PK)</text>
+    <text x="330" y="120">size</text>
+    <text x="330" y="140">location</text>
+    <text x="330" y="160">info</text>
+    <text x="330" y="180">isAvailable</text>
+  </rect>
+
+  <rect class="entity" x="550" y="50" width="160" height="120" rx="10">
+    <title>Equipment</title>
+    <text x="580" y="80">Equipment</text>
+    <text x="580" y="100">equipID (PK)</text>
+    <text x="580" y="120">equipType</text>
+    <text x="580" y="140">status</text>
+    <text x="580" y="160">last_checked</text>
+  </rect>
+
+  <rect class="entity" x="50" y="250" width="160" height="120" rx="10">
+    <title>LabBooking</title>
+    <text x="80" y="280">LabBooking</text>
+    <text x="80" y="300">bookingID (PK)</text>
+    <text x="80" y="320">start_time</text>
+    <text x="80" y="340">end_time</text>
+    <text x="80" y="360">status</text>
+  </rect>
+
+  <rect class="entity" x="300" y="250" width="160" height="120" rx="10">
+    <title>EquipmentRequest</title>
+    <text x="330" y="280">EquipmentRequest</text>
+    <text x="330" y="300">requestID (PK)</text>
+    <text x="330" y="320">request_date</text>
+    <text x="330" y="340">status</text>
+    <text x="330" y="360">return_date</text>
+  </rect>
+
+  <rect class="entity" x="550" y="250" width="160" height="120" rx="10">
+    <title>MaintenanceSchedule</title>
+    <text x="580" y="280">MaintenanceSchedule</text>
+    <text x="580" y="300">scheduleID (PK)</text>
+    <text x="580" y="320">scheduled_date</text>
+    <text x="580" y="340">status</text>
+    <text x="580" y="360">completed_date</text>
+    <text x="580" y="380">notes</text>
+  </rect>
+
+  <rect class="entity" x="300" y="400" width="160" height="120" rx="10">
+    <title>EquipmentIssue</title>
+    <text x="330" y="430">EquipmentIssue</text>
+    <text x="330" y="450">issueID (PK)</text>
+    <text x="330" y="470">description</text>
+    <text x="330" y="490">report_date</text>
+    <text x="330" y="510">resolved_date</text>
+    <text x="330" y="530">resolution_notes</text>
+  </rect>
+
+  <!-- Relationships -->
+  <path class="relationship" d="M130,210 L130,240" marker-end="url(#arrow)">
+    <title>books</title>
+    <text class="cardinality" x="110" y="220">1</text>
+    <text class="cardinality" x="150" y="220">M</text>
+  </path>
+
+  <path class="relationship" d="M380,210 L380,240" marker-end="url(#arrow)">
+    <title>has</title>
+    <text class="cardinality" x="360" y="220">1</text>
+    <text class="cardinality" x="400" y="220">M</text>
+  </path>
+
+  <path class="relationship" d="M380,170 L460,170" marker-end="url(#arrow)">
+    <title>requested in</title>
+    <text class="cardinality" x="390" y="160">1</text>
+    <text class="cardinality" x="450" y="160">M</text>
+  </path>
+
+  <path class="relationship" d="M630,170 L630,240" marker-end="url(#arrow)">
+    <title>maintained by</title>
+    <text class="cardinality" x="610" y="200">1</text>
+    <text class="cardinality" x="650" y="200">M</text>
+  </path>
+
+  <path class="relationship" d="M380,380 L380,420" marker-end="url(#arrow)">
+    <title>reported for</title>
+    <text class="cardinality" x="360" y="400">1</text>
+    <text class="cardinality" x="400" y="400">M</text>
+  </path>
+
+  <path class="relationship" d="M130,170 L230,170" marker-end="url(#arrow)">
+    <title>requests</title>
+    <text class="cardinality" x="140" y="160">1</text>
+    <text class="cardinality" x="220" y="160">M</text>
+  </path>
+</svg>

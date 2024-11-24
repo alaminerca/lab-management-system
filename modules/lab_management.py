@@ -29,32 +29,96 @@ class LabManagement:
 
     @staticmethod
     def get_all_labs() -> List[Lab]:
-        """Get all labs from database"""
+        """Get all labs with current availability status"""
         try:
+            current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Format datetime correctly
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
-                cursor.execute('SELECT labID, size, location, info, isAvailable, created_at FROM labs')
-                return [Lab(*row) for row in cursor.fetchall()]
-        except sqlite3.Error as e:
-            print(f"Database error: {e}")
-            return []
+                # Simplified query first to debug
+                cursor.execute("""
+                    SELECT 
+                        l.labID,
+                        l.size,
+                        l.location,
+                        l.info,
+                        CASE 
+                            WHEN b.bookingID IS NOT NULL THEN 0
+                            ELSE l.isAvailable
+                        END as isAvailable,
+                        l.created_at
+                    FROM labs l
+                    LEFT JOIN lab_bookings b ON l.labID = b.labID
+                        AND b.status = 'approved'
+                        AND ? BETWEEN b.start_time AND b.end_time
+                """, (current_time,))
 
+                rows = cursor.fetchall()
+                labs = []
+                for row in rows:
+                    try:
+                        lab = Lab(
+                            lab_id=str(row[0]),
+                            size=int(row[1]),
+                            location=str(row[2]),
+                            info=str(row[3]),
+                            is_available=bool(row[4]),
+                            created_at=datetime.strptime(row[5], '%Y-%m-%d %H:%M:%S') if row[5] else datetime.now()
+                        )
+                        labs.append(lab)
+                    except Exception as e:
+                        print(f"Error creating lab object: {e}")
+                        continue
+
+                return labs
+
+        except sqlite3.Error as e:
+            print(f"Database error in get_all_labs: {e}")
+            return []
+        except Exception as e:
+            print(f"Unexpected error in get_all_labs: {e}")
+            return []
 
     @staticmethod
     def get_lab(lab_id: str) -> Optional[Lab]:
-        """Retrieve lab information"""
+        """Get a specific lab with its current availability"""
         try:
+            current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
-                cursor.execute(
-                    "SELECT * FROM labs WHERE labID = ?",
-                    (lab_id,)
-                )
-                result = cursor.fetchone()
-                if result:
-                    return Lab(*result)
+                cursor.execute("""
+                        SELECT 
+                            l.labID,
+                            l.size,
+                            l.location,
+                            l.info,
+                            CASE 
+                                WHEN b.bookingID IS NOT NULL THEN 0
+                                ELSE l.isAvailable
+                            END as isAvailable,
+                            l.created_at
+                        FROM labs l
+                        LEFT JOIN lab_bookings b ON l.labID = b.labID
+                            AND b.status = 'approved'
+                            AND ? BETWEEN b.start_time AND b.end_time
+                        WHERE l.labID = ?
+                    """, (current_time, lab_id))
+
+                row = cursor.fetchone()
+                if row:
+                    return Lab(
+                        lab_id=str(row[0]),
+                        size=int(row[1]),
+                        location=str(row[2]),
+                        info=str(row[3]),
+                        is_available=bool(row[4]),
+                        created_at=datetime.strptime(row[5], '%Y-%m-%d %H:%M:%S') if row[5] else datetime.now()
+                    )
                 return None
-        except sqlite3.Error:
+        except sqlite3.Error as e:
+            print(f"Database error in get_lab: {e}")
+            return None
+        except Exception as e:
+            print(f"Unexpected error in get_lab: {e}")
             return None
 
     @staticmethod
@@ -81,51 +145,95 @@ class LabManagement:
     def is_lab_available(lab_id: str, start_time: datetime, end_time: datetime) -> bool:
         """Check if a lab is available for a specific time slot"""
         try:
-            print(f"Checking availability for lab {lab_id}")  # Debug print
-            print(f"Time slot: {start_time} to {end_time}")  # Debug print
-
             with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
+
+                # Check if lab exists and is generally available
                 cursor.execute("""
-                    SELECT COUNT(*) FROM lab_bookings
-                    WHERE labID = ?
-                    AND (
-                        (start_time <= ? AND end_time >= ?)
-                        OR (start_time <= ? AND end_time >= ?)
-                    )
-                    AND status != 'cancelled'
-                """, (lab_id, end_time, start_time, end_time, start_time))
+                        SELECT isAvailable 
+                        FROM labs 
+                        WHERE labID = ?
+                    """, (lab_id,))
+
+                lab_status = cursor.fetchone()
+                if not lab_status or not lab_status[0]:
+                    return False
+
+                # Format datetime objects correctly
+                start_str = start_time.strftime('%Y-%m-%d %H:%M:%S')
+                end_str = end_time.strftime('%Y-%m-%d %H:%M:%S')
+
+                # Check for booking conflicts
+                cursor.execute("""
+                        SELECT COUNT(*) 
+                        FROM lab_bookings 
+                        WHERE labID = ?
+                        AND status = 'approved'
+                        AND (
+                            (start_time <= ? AND end_time >= ?)
+                            OR (start_time <= ? AND end_time >= ?)
+                            OR (start_time >= ? AND end_time <= ?)
+                        )
+                    """, (lab_id, end_str, start_str, end_str, start_str, start_str, end_str))
+
                 count = cursor.fetchone()[0]
-                print(f"Found {count} conflicting bookings")  # Debug print
                 return count == 0
+
         except sqlite3.Error as e:
-            print(f"Database error in is_lab_available: {e}")  # Debug print
+            print(f"Database error in is_lab_available: {e}")
+            return False
+        except Exception as e:
+            print(f"Unexpected error in is_lab_available: {e}")
             return False
 
     @staticmethod
     def book_lab(user_id: int, lab_id: str, start_time: datetime, end_time: datetime) -> bool:
-        """Book a lab for a specific time slot"""
+        """Book a lab with improved error handling"""
         try:
-            print(f"Attempting to book lab {lab_id}")  # Debug print
-            print(f"User: {user_id}")  # Debug print
-            print(f"Time: {start_time} to {end_time}")  # Debug print
-
             with sqlite3.connect('lab_management.db') as conn:
-                # Check if lab is available
+                cursor = conn.cursor()
+
+                # Format datetime objects
+                start_str = start_time.strftime('%Y-%m-%d %H:%M:%S')
+                end_str = end_time.strftime('%Y-%m-%d %H:%M:%S')
+
+                # Check availability first
                 if not LabManagement.is_lab_available(lab_id, start_time, end_time):
-                    print("Lab not available")  # Debug print
+                    print("Lab not available for booking")
                     return False
 
+                # Create booking
+                cursor.execute("""
+                       INSERT INTO lab_bookings (userID, labID, start_time, end_time, status)
+                       VALUES (?, ?, ?, ?, 'pending')
+                   """, (user_id, lab_id, start_str, end_str))
+
+                conn.commit()
+                return True
+
+        except sqlite3.Error as e:
+            print(f"Database error in book_lab: {e}")
+            return False
+        except Exception as e:
+            print(f"Unexpected error in book_lab: {e}")
+            return False
+
+    @staticmethod
+    def update_lab_status(lab_id: str, is_available: bool) -> bool:
+        """Update lab's general availability status"""
+        try:
+            with sqlite3.connect('lab_management.db') as conn:
                 cursor = conn.cursor()
                 cursor.execute("""
-                    INSERT INTO lab_bookings (userID, labID, start_time, end_time, status)
-                    VALUES (?, ?, ?, ?, 'pending')
-                """, (user_id, lab_id, start_time, end_time))
-                print("Booking created successfully")  # Debug print
+                       UPDATE labs 
+                       SET isAvailable = ? 
+                       WHERE labID = ?
+                   """, (is_available, lab_id))
                 return True
         except sqlite3.Error as e:
-            print(f"Database error in book_lab: {e}")  # Debug print
+            print(f"Database error: {e}")
             return False
+
     @staticmethod
     def get_lab_schedule(lab_id: str) -> List[Dict]:
         """Get the schedule for a specific lab"""
