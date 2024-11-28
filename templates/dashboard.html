@@ -7,7 +7,6 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {% if 'view_lab' in session.permissions or 'book_lab' in session.permissions %}
-        <!-- Lab Management Card -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-4">Lab Management</h2>
             <div class="space-y-2">
@@ -32,7 +31,7 @@
         </div>
         {% endif %}
 
-        <!-- Equipment Management Card -->
+        {% if session.role in ['administrator', 'it_staff'] %}
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-4">Equipment Management</h2>
             <div class="space-y-2">
@@ -50,23 +49,15 @@
                     Remove Equipment
                 </a>
                 {% endif %}
-<!-- Inside Equipment Management Card for Admin -->
-            {% if session.role == 'administrator' %}
-            <div class="space-y-2">
-<!--                <a href="/inventory/request" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">-->
-<!--                    Request Equipment-->
-<!--                </a>-->
-<!--                <a href="/inventory/purchase" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">-->
-<!--                    Purchase Equipment-->
-<!--                </a>-->
+
+                {% if session.role == 'administrator' %}
                 <a href="/equipment/check" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
                     Check Equipment
                 </a>
                 <a href="/maintenance/reports" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
                     Maintenance Reports
                 </a>
-            </div>
-            {% endif %}
+                {% endif %}
 
                 {% if 'request_equipment' in session.permissions %}
                 <a href="/inventory/request" class="block p-2 bg-blue-50 hover:bg-blue-100 rounded">
@@ -83,7 +74,6 @@
         </div>
 
         {% if session.role == 'it_staff' %}
-        <!-- Maintenance Card -->
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-bold mb-4">Maintenance</h2>
             <div class="space-y-2">
@@ -95,6 +85,7 @@
                 </a>
             </div>
         </div>
+        {% endif %}
         {% endif %}
     </div>
 </div>

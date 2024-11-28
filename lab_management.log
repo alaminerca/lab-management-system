@@ -2419,3 +2419,367 @@
 2024-11-24 18:34:05,228 - werkzeug - WARNING -  * Debugger is active!
 2024-11-24 18:34:05,238 - werkzeug - INFO -  * Debugger PIN: 756-410-875
 2024-11-24 18:34:05,309 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-24 18:57:54,124 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-24 18:57:54,125 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-24 18:57:55,527 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-24 18:57:57,592 - werkzeug - WARNING -  * Debugger is active!
+2024-11-24 18:57:57,605 - werkzeug - INFO -  * Debugger PIN: 756-410-875
+2024-11-24 18:57:57,684 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-24 18:59:45,821 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-24 18:59:46,747 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-24 18:59:48,286 - werkzeug - WARNING -  * Debugger is active!
+2024-11-24 18:59:48,297 - werkzeug - INFO -  * Debugger PIN: 756-410-875
+2024-11-24 18:59:48,369 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-24 18:59:56,113 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-24 18:59:56,114 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-24 18:59:57,232 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-24 18:59:58,618 - werkzeug - WARNING -  * Debugger is active!
+2024-11-24 18:59:58,628 - werkzeug - INFO -  * Debugger PIN: 756-410-875
+2024-11-24 18:59:58,699 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-24 19:00:44,372 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:44] "[32mGET /labs/view HTTP/1.1[0m" 302 -
+2024-11-24 19:00:44,400 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:44] "GET /login HTTP/1.1" 200 -
+2024-11-24 19:00:44,552 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:44] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:00:55,658 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-24 19:00:55,682 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:55] "GET /dashboard HTTP/1.1" 200 -
+2024-11-24 19:00:55,731 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:55] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:00:59,755 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:59] "GET /labs/view HTTP/1.1" 200 -
+2024-11-24 19:00:59,797 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:00:59] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:01:07,260 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:07] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-24 19:01:07,298 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:07] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:01:11,597 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:11] "[32mGET /labs/access/12 HTTP/1.1[0m" 302 -
+2024-11-24 19:01:11,611 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:11] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-24 19:01:11,648 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:11] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:01:16,808 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:16] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-24 19:01:38,160 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:38] "GET /dashboard HTTP/1.1" 200 -
+2024-11-24 19:01:38,198 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:38] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:01:41,086 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:41] "GET /dashboard HTTP/1.1" 200 -
+2024-11-24 19:01:41,126 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:01:41] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:03,318 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:03] "GET /labs/view HTTP/1.1" 200 -
+2024-11-24 19:02:03,363 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:03] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:14,363 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-24 19:02:14,374 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:14] "GET /login HTTP/1.1" 200 -
+2024-11-24 19:02:14,424 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:14] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:23,258 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-24 19:02:23,272 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:23] "GET /dashboard HTTP/1.1" 200 -
+2024-11-24 19:02:23,324 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:23] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:27,429 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:27] "GET /maintenance/reports HTTP/1.1" 200 -
+2024-11-24 19:02:27,475 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:27] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:31,081 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:31] "GET /maintenance/tasks HTTP/1.1" 200 -
+2024-11-24 19:02:31,124 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:31] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:34,410 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:34] "GET /equipment/maintain HTTP/1.1" 200 -
+2024-11-24 19:02:34,458 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:34] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:43,076 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:43] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-24 19:02:43,121 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:43] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:46,098 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:46] "GET /equipment/add HTTP/1.1" 200 -
+2024-11-24 19:02:46,143 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:46] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:02:50,655 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:50] "GET /equipment/remove HTTP/1.1" 200 -
+2024-11-24 19:02:50,701 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:02:50] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:03:01,236 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:01] "GET /login HTTP/1.1" 200 -
+2024-11-24 19:03:12,005 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-24 19:03:12,022 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:12] "GET /dashboard HTTP/1.1" 200 -
+2024-11-24 19:03:12,074 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:12] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:03:14,347 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:14] "GET /labs/view HTTP/1.1" 200 -
+2024-11-24 19:03:14,393 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:14] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:03:17,006 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:17] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-24 19:03:17,048 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:17] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:03:19,835 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:19] "[32mGET /labs/access/7 HTTP/1.1[0m" 302 -
+2024-11-24 19:03:19,851 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:19] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-24 19:03:19,888 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:19] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-24 19:03:23,434 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-24 19:03:23,452 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:23] "GET /login HTTP/1.1" 200 -
+2024-11-24 19:03:23,495 - werkzeug - INFO - 127.0.0.1 - - [24/Nov/2024 19:03:23] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:38:55,111 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-27 21:38:56,492 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 21:38:56,531 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-27 21:38:56,628 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-27 21:39:10,259 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:39:10] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 21:39:10,476 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:39:10] "GET /login HTTP/1.1" 200 -
+2024-11-27 21:39:10,628 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:39:10] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:39:12,201 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:39:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-27 21:42:12,217 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:42:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 21:42:12,384 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:42:12] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:42:12,439 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:42:12] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:46:49,229 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:46:49] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:46:49,278 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:46:49] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:00,598 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:00] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:47:00,663 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:00] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:16,053 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:16] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:47:16,089 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:16] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:17,989 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:17] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 21:47:18,036 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:18] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:20,631 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:20] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:47:20,677 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:20] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:22,210 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:22] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 21:47:22,253 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:22] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:29,195 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:29] "[32mGET /labs/access/5 HTTP/1.1[0m" 302 -
+2024-11-27 21:47:29,208 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:29] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 21:47:29,251 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:29] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:47:31,676 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:31] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 21:47:48,352 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:48] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:47:48,396 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:47:48] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:51:07,159 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:51:07] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 21:51:07,210 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:51:07] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:51:13,207 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:51:13] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 21:51:13,253 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:51:13] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:52:39,297 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:52:39] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 21:52:39,313 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:52:39] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 21:52:39,351 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:52:39] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:53:28,041 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:53:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-27 21:53:28,051 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:53:28] "GET /login HTTP/1.1" 200 -
+2024-11-27 21:53:28,098 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:53:28] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:53:40,400 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:53:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 21:53:40,413 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:53:40] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:53:40,461 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:53:40] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:57:41,631 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:41] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-27 21:57:41,674 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:41] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:57:49,033 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:49] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 21:57:49,077 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:49] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:57:51,288 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:51] "GET /inventory/request HTTP/1.1" 200 -
+2024-11-27 21:57:51,331 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:51] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:57:56,123 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:56] "GET /inventory/purchase HTTP/1.1" 200 -
+2024-11-27 21:57:56,174 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:57:56] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:58:08,070 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:58:08] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-27 21:58:08,118 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:58:08] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 21:59:22,269 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:59:22] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-27 21:59:22,316 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 21:59:22] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:01:34,890 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:01:34] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:01:34,938 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:01:34] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:01:36,854 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:01:36] "GET /maintenance/reports HTTP/1.1" 200 -
+2024-11-27 22:01:36,892 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:01:36] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:13,331 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:13] "GET /inventory/status HTTP/1.1" 200 -
+2024-11-27 22:04:13,373 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:13] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:18,672 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:18] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:04:18,718 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:18] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:22,631 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:22] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:04:22,678 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:22] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:28,815 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:28] "GET /inventory/request HTTP/1.1" 200 -
+2024-11-27 22:04:28,861 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:28] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:47,373 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:47] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:04:47,493 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:47] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:50,183 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:50] "GET /inventory/request HTTP/1.1" 200 -
+2024-11-27 22:04:50,229 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:50] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:04:59,141 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:59] "GET /inventory/purchase HTTP/1.1" 200 -
+2024-11-27 22:04:59,185 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:04:59] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:10:08,520 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-27 22:10:08,533 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:08] "GET /login HTTP/1.1" 200 -
+2024-11-27 22:10:08,584 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:08] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:10:17,488 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 22:10:17,503 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:17] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:10:17,549 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:17] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:10:21,847 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:21] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:10:21,891 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:21] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:10:28,439 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:28] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:10:28,482 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:28] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:10:47,349 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:47] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 22:10:47,365 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:47] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:10:47,404 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:10:47] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:11:17,589 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:11:17] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 22:11:17,605 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:11:17] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:11:17,644 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:11:17] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:11:47,063 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:11:47] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 22:11:47,081 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:11:47] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:11:47,122 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:11:47] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:12:23,768 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:23] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 22:12:23,784 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:23] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:12:23,823 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:23] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:12:36,460 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:36] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-27 22:12:36,480 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:36] "GET /login HTTP/1.1" 200 -
+2024-11-27 22:12:36,586 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:36] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:12:37,084 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-27 22:12:49,915 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 22:12:49,938 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:49] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:12:50,023 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:50] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:12:54,039 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:54] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:12:54,109 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:12:54] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:13:01,754 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:01] "[32mPOST /labs/assignment/process/15/approve HTTP/1.1[0m" 302 -
+2024-11-27 22:13:01,780 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:01] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:13:01,851 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:01] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:13:07,588 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:07] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:13:07,637 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:07] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:13:10,789 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:10] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:13:10,832 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:10] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:13:42,311 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:42] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:13:42,359 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:13:42] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:16:32,177 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:32] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:16:32,219 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:32] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:16:48,774 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:48] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:16:48,818 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:48] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:16:52,888 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:52] "GET /labs/access/15 HTTP/1.1" 200 -
+2024-11-27 22:16:52,932 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:52] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:16:57,086 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:57] "GET /labs/access/15 HTTP/1.1" 200 -
+2024-11-27 22:16:57,133 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:16:57] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:17:03,373 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:17:03] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:17:03,408 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:17:03] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:19:34,085 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:19:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-27 22:19:34,099 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:19:34] "GET /login HTTP/1.1" 200 -
+2024-11-27 22:19:34,167 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:19:34] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:20:34,474 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 22:20:34,493 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:34] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:20:34,566 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:34] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:20:40,783 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:40] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:20:40,835 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:40] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:20:43,156 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:43] "[32mGET /labs/access/15 HTTP/1.1[0m" 302 -
+2024-11-27 22:20:43,172 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:43] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:20:43,253 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:43] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:20:47,815 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:47] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:20:50,164 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:50] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:20:50,216 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:20:50] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:03,799 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:03] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 22:21:03,816 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:03] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:21:03,859 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:03] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:24,186 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:24] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:21:24,230 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:24] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:28,370 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:28] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:21:28,418 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:28] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:31,422 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:31] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:21:31,462 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:31] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:36,317 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:36] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:21:36,364 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:36] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:38,321 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:38] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:21:38,370 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:38] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:21:49,973 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:49] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:21:50,013 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:21:50] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:24:28,311 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:24:28,316 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:24:28,321 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:24:29,163 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-27 22:24:30,943 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 22:24:30,964 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-27 22:24:31,056 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-27 22:25:11,902 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:25:11,904 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:25:11,915 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:25:11,931 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\app.py', reloading
+2024-11-27 22:25:12,990 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-27 22:25:15,503 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 22:25:15,524 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-27 22:25:15,623 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-27 22:25:59,978 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:25:59] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-11-27 22:26:00,015 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:00] "GET /login HTTP/1.1" 200 -
+2024-11-27 22:26:00,179 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:00] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:08,502 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 22:26:08,529 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:08] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:26:08,585 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:08] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:13,013 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:13] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:26:13,059 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:13] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:19,116 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\app.py', reloading
+2024-11-27 22:26:19,133 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\flask\\templating.py', reloading
+2024-11-27 22:26:19,147 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2024-11-27 22:26:19,161 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\anaconda3\\Lib\\_strptime.py', reloading
+2024-11-27 22:26:19,162 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:19] "[35m[1mGET /labs/mybookings HTTP/1.1[0m" 500 -
+2024-11-27 22:26:19,262 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:19] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-11-27 22:26:19,262 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:19] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-11-27 22:26:19,421 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:19] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-27 22:26:19,540 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:19] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2024-11-27 22:26:19,865 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:19] "GET /labs/mybookings?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-11-27 22:26:20,111 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-27 22:26:21,664 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 22:26:21,686 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-27 22:26:21,788 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-27 22:26:31,273 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:31] "[32mGET /labs/mybookings HTTP/1.1[0m" 302 -
+2024-11-27 22:26:31,307 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:31] "GET /login HTTP/1.1" 200 -
+2024-11-27 22:26:31,522 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:31] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:35,135 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 22:26:35,163 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:35] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:26:35,216 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:35] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:36,869 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:36] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:26:36,916 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:36] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:47,545 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:47] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2024-11-27 22:26:47,559 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:47] "GET /login HTTP/1.1" 200 -
+2024-11-27 22:26:47,628 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:47] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:26:58,633 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 22:26:58,666 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:58] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:26:58,765 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:26:58] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:00,524 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:00] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:27:00,606 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:00] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:09,233 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:09] "[32mPOST /labs/assignment/process/14/approve HTTP/1.1[0m" 302 -
+2024-11-27 22:27:09,251 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:09] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:27:09,326 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:09] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:13,782 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:13] "[32mPOST /labs/assignment/process/16/approve HTTP/1.1[0m" 302 -
+2024-11-27 22:27:13,801 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:13] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:27:13,879 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:13] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:15,603 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:15] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:27:15,652 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:15] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:18,158 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:18] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:27:18,202 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:18] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:20,436 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:20] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:27:20,488 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:20] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:21,646 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:21] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:27:21,696 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:21] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:25,929 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:25] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:27:25,980 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:25] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:30,208 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:30] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:27:30,254 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:30] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:33,417 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:33] "[32mGET /labs/access/16 HTTP/1.1[0m" 302 -
+2024-11-27 22:27:33,433 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:33] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:27:33,475 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:33] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:38,274 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:38] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:27:40,449 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:40] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:27:40,500 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:40] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:52,230 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:52] "[32mPOST /labs/book HTTP/1.1[0m" 302 -
+2024-11-27 22:27:52,249 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:52] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:27:52,292 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:52] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:27:59,618 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:59] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:27:59,688 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:27:59] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:05,349 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:05] "[32mPOST /labs/assignment/process/17/approve HTTP/1.1[0m" 302 -
+2024-11-27 22:28:05,384 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:05] "GET /labs/assignments HTTP/1.1" 200 -
+2024-11-27 22:28:05,448 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:05] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:09,560 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:09] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:28:09,610 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:09] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:10,827 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:10] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:28:10,878 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:10] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:13,128 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:13] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:28:13,176 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:13] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:15,996 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:15] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:28:16,038 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:16] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:17,904 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:17] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:28:17,960 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:17] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:19,194 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:19] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:28:19,245 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:19] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:21,212 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:21] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:28:21,262 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:21] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:28:22,265 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:22] "GET /labs/mybookings HTTP/1.1" 200 -
+2024-11-27 22:28:22,333 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:28:22] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:30:45,718 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:30:45] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:30:45,770 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:30:45] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:30:48,039 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:30:48] "GET /labs/view HTTP/1.1" 200 -
+2024-11-27 22:30:48,087 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:30:48] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 22:31:01,032 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:31:01] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 22:31:01,070 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 22:31:01] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:02:22,486 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\database\\test_go.py', reloading
+2024-11-27 23:02:22,510 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\database_setup.py', reloading
+2024-11-27 23:02:22,739 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\equipment_management.py', reloading
+2024-11-27 23:02:22,750 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\error_handling.py', reloading
+2024-11-27 23:02:22,759 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\inventory_management.py', reloading
+2024-11-27 23:02:22,770 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\lab_management.py', reloading
+2024-11-27 23:02:22,772 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\user_management.py', reloading
+2024-11-27 23:02:22,774 - werkzeug - INFO -  * Detected change in 'C:\\Users\\alami\\Desktop\\Fac\\Year 3\\Term31\\Software Eng\\labs\\codes\\lab_management_system\\modules\\__init__.py', reloading
+2024-11-27 23:02:23,660 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-27 23:02:25,305 - werkzeug - WARNING -  * Debugger is active!
+2024-11-27 23:02:25,325 - werkzeug - INFO -  * Debugger PIN: 132-221-061
+2024-11-27 23:02:25,419 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-11-27 23:04:05,916 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-27 23:04:05,946 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:05] "GET /login HTTP/1.1" 200 -
+2024-11-27 23:04:06,223 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:06] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:26,433 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-11-27 23:04:26,459 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:26] "GET /dashboard HTTP/1.1" 200 -
+2024-11-27 23:04:26,507 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:26] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:30,071 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:30] "GET /equipment/remove HTTP/1.1" 200 -
+2024-11-27 23:04:30,115 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:30] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:33,482 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:33] "GET /equipment/add HTTP/1.1" 200 -
+2024-11-27 23:04:33,529 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:33] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:35,833 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:35] "GET /equipment/add HTTP/1.1" 200 -
+2024-11-27 23:04:35,894 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:35] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:37,818 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:37] "GET /equipment/check HTTP/1.1" 200 -
+2024-11-27 23:04:37,868 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:37] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:40,147 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:40] "GET /equipment/maintain HTTP/1.1" 200 -
+2024-11-27 23:04:40,193 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:40] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:42,876 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:42] "GET /maintenance/tasks HTTP/1.1" 200 -
+2024-11-27 23:04:42,929 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:42] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:46,855 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:46] "GET /maintenance/reports HTTP/1.1" 200 -
+2024-11-27 23:04:46,905 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:46] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:04:49,816 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:49] "GET /maintenance/tasks HTTP/1.1" 200 -
+2024-11-27 23:04:49,863 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:04:49] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -
+2024-11-27 23:05:14,454 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:05:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-11-27 23:05:14,468 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:05:14] "GET /login HTTP/1.1" 200 -
+2024-11-27 23:05:14,517 - werkzeug - INFO - 127.0.0.1 - - [27/Nov/2024 23:05:14] "[36mGET /static/images/IU_ALL_H_COLOR_RGB.svg HTTP/1.1[0m" 304 -

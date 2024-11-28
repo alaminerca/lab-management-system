@@ -1,62 +1,90 @@
 {% extends "base.html" %}
-
 {% block content %}
+
 <div class="container mx-auto px-4 py-8">
     <h1 class="text-2xl font-bold mb-6">Equipment Status Check</h1>
 
     <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <table class="min-w-full">
+        <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
                 <tr>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Equipment</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Last Checked</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Equipment</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Checked</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                 </tr>
             </thead>
-            <tbody class="divide-y divide-gray-200">
+            <tbody class="bg-white divide-y divide-gray-200">
                 {% for item in equipment %}
                 <tr>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 whitespace-nowrap">
                         <div class="text-sm font-medium text-gray-900">{{ item.equipType }}</div>
                         <div class="text-sm text-gray-500">ID: {{ item.equipID }}</div>
                     </td>
-                    <td class="px-6 py-4">
-                        <span class="px-2 py-1 text-xs rounded-full
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full
                             {% if item.status == 'operational' %}bg-green-100 text-green-800
                             {% else %}bg-red-100 text-red-800{% endif %}">
                             {{ item.status }}
                         </span>
                     </td>
-                    <td class="px-6 py-4 text-sm text-gray-500">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {{ item.last_checked }}
                     </td>
-                    <td class="px-6 py-4">
-                        {% if item.status == 'operational' %}
-                        <form method="POST" action="{{ url_for('report_issue', equip_id=item.equipID) }}" class="inline">
-                            <input type="text" name="issue"
-                                   class="border rounded px-2 py-1"
-                                   placeholder="Issue description" required>
-                            <button type="submit"
-                                    class="ml-2 bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                        {% if 'report_issue' in session.permissions and item.status == 'operational' %}
+                            <button onclick="showReportModal('{{ item.equipID }}')"
+                                    class="text-indigo-600 hover:text-indigo-900">
                                 Report Issue
                             </button>
-                        </form>
-                        {% else %}
-                        <span class="text-sm text-gray-500">Maintenance Required</span>
+                        {% elif item.status != 'operational' %}
+                            <span class="text-sm text-gray-500">Maintenance Required</span>
                         {% endif %}
                     </td>
                 </tr>
                 {% endfor %}
-                {% if not equipment %}
-                <tr>
-                    <td colspan="4" class="px-6 py-4 text-center text-gray-500">
-                        No equipment found in the system
-                    </td>
-                </tr>
-                {% endif %}
             </tbody>
         </table>
     </div>
+
+    <!-- Report Issue Modal -->
+    <div id="reportModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+            <h2 class="text-xl font-bold mb-4">Report Equipment Issue</h2>
+            <form id="reportForm" method="POST">
+                <div class="mb-4">
+                    <label for="issue" class="block text-sm font-medium text-gray-700">Issue Description</label>
+                    <textarea id="issue" name="issue" rows="3"
+                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                              required></textarea>
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button type="button" onclick="hideReportModal()"
+                            class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">
+                        Cancel
+                    </button>
+                    <button type="submit"
+                            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                        Submit Report
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+
+<script>
+function showReportModal(equipId) {
+    const modal = document.getElementById('reportModal');
+    const form = document.getElementById('reportForm');
+    form.action = `/equipment/report/${equipId}`;
+    modal.classList.remove('hidden');
+}
+
+function hideReportModal() {
+    const modal = document.getElementById('reportModal');
+    modal.classList.add('hidden');
+}
+</script>
+
 {% endblock %}

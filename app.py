@@ -8,7 +8,7 @@ from modules.equipment_management import EquipmentManagement
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-# Updated users with all actors from use case
+# Update the USERS dictionary in app.py
 USERS = {
     '123': {
         'password': 'test123',
@@ -20,19 +20,31 @@ USERS = {
             'request_equipment',
             'purchase_equipment',
             'check_equipment',
-            'view_maintenance_reports' ]
+            'view_maintenance_reports',
+            'report_issue'  # Added permission
+        ]
     },
     '456': {
         'password': 'test456',
         'role': 'student',
         'name': 'Student User',
-        'permissions': ['view_lab', 'book_lab', 'access_lab']
+        'permissions': [
+            'view_lab',
+            'book_lab',
+            'access_lab',
+            'report_issue'  # Added permission
+        ]
     },
     '321': {
         'password': 'test321',
         'role': 'instructor',
         'name': 'Instructor User',
-        'permissions': ['view_lab', 'book_lab', 'access_lab']
+        'permissions': [
+            'view_lab',
+            'book_lab',
+            'access_lab',
+            'report_issue'  # Added permission
+        ]
     },
     '789': {
         'password': 'test789',
@@ -43,7 +55,8 @@ USERS = {
             'add_equipment',
             'remove_equipment',
             'check_equipment',
-            'view_maintenance_reports'
+            'view_maintenance_reports',
+            'report_issue'
         ]
     }
 }
@@ -244,7 +257,16 @@ def my_bookings():
         return redirect(url_for('dashboard'))
 
     bookings = LabManagement.get_user_bookings(session['user_id'])
-    return render_template('labs/mybookings.html', bookings=bookings)
+
+    def is_current_booking(booking):
+        now = datetime.now()
+        start_time = datetime.strptime(booking['start_time'], '%Y-%m-%d %H:%M')
+        end_time = datetime.strptime(booking['end_time'], '%Y-%m-%d %H:%M')
+        return start_time <= now <= end_time
+
+    return render_template('labs/mybookings.html',
+                           bookings=bookings,
+                           is_current_booking=is_current_booking)
 
 
 @app.route('/labs/access/<int:booking_id>')
@@ -298,25 +320,12 @@ def check_equipment():  # This is the correct function name
     return render_template('equipment/check.html', equipment=equipment_list)
 
 
-# @app.route('/equipment/report/<int:equip_id>', methods=['POST'])
-# @login_required
-# def report_equipment(equip_id):
-#     if 'check_equipment' not in session.get('permissions', []):
-#         flash('Unauthorized access')
-#         return redirect(url_for('dashboard'))
-#
-#     issue = request.form.get('issue')
-#     if EquipmentManagement.report_issue(equip_id, issue, session['user_id']):
-#         flash('Issue reported successfully')
-#     else:
-#         flash('Failed to report issue')
-#     return redirect(url_for('check_equipment'))
-
 
 @app.route('/equipment/report/<int:equip_id>', methods=['POST'])
 @login_required
 def report_issue(equip_id):
-    if 'check_equipment' not in session.get('permissions', []):
+    # Changed from 'check_equipment' to 'report_issue'
+    if 'report_issue' not in session.get('permissions', []):
         flash('Unauthorized access')
         return redirect(url_for('dashboard'))
 
